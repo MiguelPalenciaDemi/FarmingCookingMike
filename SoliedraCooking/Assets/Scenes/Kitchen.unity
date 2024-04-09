@@ -2602,7 +2602,7 @@ PrefabInstance:
     - target: {fileID: 2068170472930230375, guid: 572609a7f3113f64dbc1d80b191f9fff, type: 3}
       propertyPath: foodPrefab
       value: 
-      objectReference: {fileID: 5185751563349507247, guid: 6968ded8d52c6ff4ebefab5d5357c04f, type: 3}
+      objectReference: {fileID: 3914540481097683585, guid: 1e6ed552735a1364d85b25eab3a08d5b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -7,11 +7,11 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
 {
     [SerializeField] private GameObject foodPrefab;
     [SerializeField] private int amount;
-    private FoodTag.FoodItem _foodItem;
+    private FoodTag _foodItem;
 
     private void Awake()
     {
-        _foodItem = foodPrefab.GetComponent<FoodTag>().foodTag;
+        _foodItem = foodPrefab.GetComponent<Ingredient>().GetFoodTag();
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -26,8 +26,9 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
         }
         else if(player.ObjectPickedUp)
         {
-            var objectPickedTag = player.ObjectPickedUp.GetComponent<FoodTag>().foodTag;
-            if(objectPickedTag == _foodItem)//Check if we've got the same foodType in the hand
+            var ingredient = player.ObjectPickedUp.GetComponent<Ingredient>();
+            var objectPickedTag = ingredient.GetFoodTag();
+            if(objectPickedTag == _foodItem && ingredient.GetState() == IngredientState.Raw)//Check if we've got the same foodType in the hand and it's raw
             {
                 Debug.Log("Dejar Objeto");
                 amount++;
