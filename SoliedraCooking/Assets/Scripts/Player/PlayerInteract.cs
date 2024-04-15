@@ -26,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
     {
         CheckInteract();
         
-        if (_canInteract && Input.GetButton("Interact")) 
+        if (_canInteract && Input.GetButtonDown("Interact")) 
         {
             _objectInteractable.Interact(this);
         }

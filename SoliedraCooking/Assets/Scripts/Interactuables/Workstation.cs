@@ -5,9 +5,16 @@ using UnityEngine;
 public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
 {
     [SerializeField] protected Transform objectPosition;
+    [SerializeField] protected float speedCooking = 1;
     protected GameObject _objectInWorktop;
 
+
     public virtual void Interact(PlayerInteract player)
+    {
+      
+    }
+    
+    public virtual void ForceStopInteract()
     {
       
     }

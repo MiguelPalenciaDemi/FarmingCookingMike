@@ -19,10 +19,10 @@ public class Worktop : Workstation
       
       
       if(info.IsChoppable && state != IngredientState.Chopped && state != IngredientState.Smashed)
-         ingredient.Chop();
+         ingredient.Chop(speedCooking);
       
       else if(info.IsSmashable && state != IngredientState.Smashed)
-         ingredient.Smash();
+         ingredient.Smash(speedCooking);
       
    }
    
