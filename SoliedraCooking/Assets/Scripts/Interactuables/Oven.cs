@@ -60,4 +60,10 @@ public class Oven : Workstation
         _animator.SetBool(IsOpenAnim, true);
         isOpen = true;
     }
+
+    public override void TakeDrop(PlayerInteract player)
+    {
+        if(isOpen)
+            base.TakeDrop(player);
+    }
 }

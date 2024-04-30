@@ -6,6 +6,9 @@ public class Sink : Workstation
 {
    public override void Interact(PlayerInteract player)
     {
-        
+        if (_objectInWorktop && _objectInWorktop.TryGetComponent(out Plate plate))
+        {
+            plate.Clean();
+        }
     }
 }

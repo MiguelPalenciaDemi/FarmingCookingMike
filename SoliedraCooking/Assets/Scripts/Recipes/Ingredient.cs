@@ -149,6 +149,9 @@ public class Ingredient : MonoBehaviour
    {
       return ingredientInfo;
    }
-   
-   
+
+   public IngredientRecipeStruct GetIngredientStruct()
+   {
+      return new IngredientRecipeStruct(GetFoodTag(), GetState());
+   }
 }
