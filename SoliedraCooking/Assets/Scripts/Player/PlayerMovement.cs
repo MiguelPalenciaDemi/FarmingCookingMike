@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
+
 
 
 public class PlayerMovement : MonoBehaviour
@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        PlayerInput();
         Animating();
     }
 
@@ -46,18 +45,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void PlayerInput()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        _horizontal = Input.GetAxisRaw("Horizontal");
-        _vertical = Input.GetAxisRaw("Vertical");
+        
+        _horizontal = context.ReadValue<Vector2>().x;
+        _vertical = context.ReadValue<Vector2>().y;
+        
         _movement = new Vector3(_horizontal, 0, _vertical);
         _movement.Normalize();
         
-
-        //_speedMovement = Input.GetButton("Run") ? runSpeed : walkSpeed; POr ahora solo andamos rapido
-        
     }
-
+    
+   
+    
     private void Move()
     {
         var horizontalVelocity = new Vector2(_movement.x,  _movement.z) * (_speedMovement * Time.deltaTime);

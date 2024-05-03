@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -26,15 +23,28 @@ public class PlayerInteract : MonoBehaviour
     {
         CheckInteract();
         
-        if (_canInteract && Input.GetButtonDown("Interact")) 
-        {
-            _objectInteractable.Interact(this);
-        }
+        // if (_canInteract && Input.GetButtonDown("Interact")) 
+        // {
+        //     _objectInteractable.Interact(this);
+        // }
+        //
+        // if (_canTakeDrop && Input.GetButtonDown("TakeDrop"))
+        // {
+        //     _objectPickable.TakeDrop(this);
+        // }
+    }
 
-        if (_canTakeDrop && Input.GetButtonDown("TakeDrop"))
-        {
+    public void OnTakeDrop(InputAction.CallbackContext context)
+    {
+        if(_canTakeDrop && context.phase == InputActionPhase.Canceled)//Una vez hayamos soltado
             _objectPickable.TakeDrop(this);
-        }
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if(_canInteract && context.phase == InputActionPhase.Canceled)
+            _objectInteractable.Interact(this);
+            
     }
 
     // ReSharper disable Unity.PerformanceAnalysis

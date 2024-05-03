@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.739874
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5749998
+      value: -16.163387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.949321
+      value: 12.234262
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -105,4 +105,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a22763e3b32734c963aefa084f0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 919132149155446097, guid: 6cf5257874143cd41862c2e00253d405, type: 3}
+  foodPrefab: {fileID: 5185751563349507247, guid: 6968ded8d52c6ff4ebefab5d5357c04f, type: 3}
+  amount: 5
