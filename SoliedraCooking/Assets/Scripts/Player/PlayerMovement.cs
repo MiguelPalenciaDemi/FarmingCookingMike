@@ -45,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void MoveInput(Vector2 inputMovement)
     {
         
-        _horizontal = context.ReadValue<Vector2>().x;
-        _vertical = context.ReadValue<Vector2>().y;
+        _horizontal = inputMovement.x;
+        _vertical = inputMovement.y;
         
         _movement = new Vector3(_horizontal, 0, _vertical);
         _movement.Normalize();

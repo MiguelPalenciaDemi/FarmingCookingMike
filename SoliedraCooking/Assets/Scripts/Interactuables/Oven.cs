@@ -23,17 +23,13 @@ public class Oven : Workstation
         _objectInWorktop.TryGetComponent(out Ingredient ingredient);
         if (!ingredient) return;
       
-      
-        var state = ingredient.GetState();
-        var info = ingredient.GetIngredientInfo();
-        
         if (isOpen)
         {
             TurnOn(ingredient);
         }
         else
         {
-           TurnOff(ingredient);
+            TurnOff(ingredient);
         }
         
         
@@ -51,14 +47,18 @@ public class Oven : Workstation
     {
         ingredient.Cook(this,speedCooking);
         _animator.SetBool(IsOpenAnim, false);
-        isOpen = false;
+        isOpen = false;        
+        ShowUI(true);
+
     }
 
     private void TurnOff(Ingredient ingredient)
     {
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
-        isOpen = true;
+        isOpen = true;      
+        ShowUI(false);
+
     }
 
     public override void TakeDrop(PlayerInteract player)

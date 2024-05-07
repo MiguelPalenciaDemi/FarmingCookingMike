@@ -19,8 +19,7 @@ public class DeliveryCounter : Workstation
             if (!plate) return;     //Solamente podremos dejar platos aqui.
             
             _objectInWorktop =  player.DropObject();
-            _objectInWorktop.transform.parent = objectPosition;
-            _objectInWorktop.transform.position = objectPosition.position;
+            SetObjectPosRot();
             if (OrderManager.Instance.DeliverOrder(plate))//Si se completa hacemos que desaparezca
             {
                 _objectInWorktop = null;

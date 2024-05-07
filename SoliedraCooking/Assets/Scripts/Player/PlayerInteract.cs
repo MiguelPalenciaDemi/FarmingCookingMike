@@ -34,15 +34,15 @@ public class PlayerInteract : MonoBehaviour
         // }
     }
 
-    public void OnTakeDrop(InputAction.CallbackContext context)
+    public void TakeDropInput()
     {
-        if(_canTakeDrop && context.phase == InputActionPhase.Canceled)//Una vez hayamos soltado
+        if(_canTakeDrop)
             _objectPickable.TakeDrop(this);
     }
 
-    public void OnInteract(InputAction.CallbackContext context)
+    public void InteractInput()
     {
-        if(_canInteract && context.phase == InputActionPhase.Canceled)
+        if(_canInteract)
             _objectInteractable.Interact(this);
             
     }
@@ -55,6 +55,9 @@ public class PlayerInteract : MonoBehaviour
         {
             _canInteract = false;
             _canTakeDrop = false;
+            // if(_objectInteractable != null) //Si antes podiamos interactuar con algo, desactivamos su UI
+            //     _objectInteractable.ShowUI(false);
+            //
             _objectInteractable = null;
             _objectPickable = null;
             return;
@@ -64,6 +67,7 @@ public class PlayerInteract : MonoBehaviour
         {
             _canInteract = true;
             _objectInteractable = interactable;
+           // _objectInteractable.ShowUI(true);
         }
         
         if(hit.collider.TryGetComponent<ITakeDrop>(out var pickable ))
@@ -82,8 +86,9 @@ public class PlayerInteract : MonoBehaviour
         _objectPickedUp = objectPicked;
         _objectPickedUp.transform.parent = handPos;
         _objectPickedUp.transform.localPosition = Vector3.zero;
+        _objectPickedUp.transform.localRotation = Quaternion.identity;
     }
-
+    
     public GameObject DropObject()
     {
         var dropObject = _objectPickedUp;

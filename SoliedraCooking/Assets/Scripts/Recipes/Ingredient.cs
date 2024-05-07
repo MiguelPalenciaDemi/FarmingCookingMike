@@ -16,6 +16,8 @@ public class Ingredient : MonoBehaviour
    private float _cookingTimer = 0; //Necesitamos un timer diferente, para que no se resetee, por eso cada vez que se inicie la corrutina tampoco lo ponemos a 0
    private Coroutine _cookingCoroutine;
    private Workstation _workstation;//Donde está siendo tratado
+
+   private ProgressWidget _widget;
    public void Start()
    {
       _ingredientState = IngredientState.Raw;
@@ -23,7 +25,7 @@ public class Ingredient : MonoBehaviour
    }
 
    // ReSharper disable Unity.PerformanceAnalysis
-   public void Chop(float modifier = 1)
+   public void Chop(Workstation station, float modifier = 1)
    {
       if (!ingredientInfo.IsChoppable || _ingredientState == IngredientState.Chopped) return;
 
@@ -32,19 +34,22 @@ public class Ingredient : MonoBehaviour
          _chopTimer += Time.deltaTime * modifier;
          Debug.Log("Chopping: "+_chopTimer);
          //Update UI
+         station.ShowUI(true);
+         station.UpdateUI(GetChopProgress());
       }
       else
       {
          //Finish chopping
          _ingredientState = IngredientState.Chopped;
          _chopTimer = 0;
+         station.ShowUI(false);
          UpdateModel();
       }
       
    }
 
    // ReSharper disable Unity.PerformanceAnalysis
-   public void Smash(float modifier = 1)
+   public void Smash(Workstation station,float modifier = 1)
    {
       
       if(!ingredientInfo.IsSmashable || _ingredientState == IngredientState.Smashed) return;
@@ -54,11 +59,14 @@ public class Ingredient : MonoBehaviour
          _chopTimer += Time.deltaTime * modifier;
          Debug.Log("Smashing: "+_chopTimer);
          //Update UI
+         station.ShowUI(true);
+         station.UpdateUI(GetSmashProgress());
       }
       else
       {
-         //Finish chopping
+         //Finish Smashing
          _ingredientState = IngredientState.Smashed;
+         station.ShowUI(false);
          _chopTimer = 0;
          UpdateModel();
       }
@@ -88,27 +96,42 @@ public class Ingredient : MonoBehaviour
       
       while (_ingredientState != IngredientState.Overcooked)
       {
-         var maxTimer = ingredientInfo.TimeCooking + ingredientInfo.TimeOverCook;
-         if (_cookingTimer < maxTimer)
+         while(_ingredientState != IngredientState.Cooked)//Proceso para que se cocine la comida
          {
-            Debug.Log("Cooking: " +_chopTimer);
-
+            Debug.Log("Cooking: " +_cookingTimer);
             _cookingTimer += Time.deltaTime;
+            
+            //Actualizamos la UI
+            _workstation.UpdateUI(GetCookedProgress());
 
-            if (_cookingTimer > ingredientInfo.TimeCooking && _ingredientState != IngredientState.Cooked)
+            if (_cookingTimer > ingredientInfo.TimeCooking)
             {
                _ingredientState = IngredientState.Cooked;
                UpdateModel();
-               //Do UI things
+               _cookingTimer = 0;
+               //Do VFX things
             }
 
             yield return null;
          }
-         else
+
+         while(_ingredientState == IngredientState.Cooked)//Proceso para que se queme la comida
          {
-            _ingredientState = IngredientState.Overcooked;
-            UpdateModel();
-            _workstation.ForceStopInteract();
+            Debug.Log("OverCooking: " +_cookingTimer);
+            _cookingTimer += Time.deltaTime;
+            
+            //Actualizamos la UI
+            _workstation.UpdateUI(GetOvercookedProgress());
+
+            if (_cookingTimer > ingredientInfo.TimeOverCook)
+            {
+               _ingredientState = IngredientState.Overcooked;
+               UpdateModel();
+               _workstation.ForceStopInteract();
+               //Do VFX things
+            }
+
+            yield return null;
          }
 
       }
@@ -154,4 +177,30 @@ public class Ingredient : MonoBehaviour
    {
       return new IngredientRecipeStruct(GetFoodTag(), GetState());
    }
+
+   public float GetChopProgress()
+   {
+      return _chopTimer / ingredientInfo.TimeChop;
+   }
+   
+   public float GetSmashProgress()
+   {
+      return _chopTimer / ingredientInfo.TimeSmash;
+   }
+   
+   public float GetCookedProgress()
+   {
+      return _cookingTimer / ingredientInfo.TimeCooking;
+   }
+   
+   public float GetOvercookedProgress()
+   {
+      return _cookingTimer /ingredientInfo.TimeOverCook;
+   }
+
+   public void CleanWorkstation()
+   {
+      _workstation = null;
+   }
+   
 }
