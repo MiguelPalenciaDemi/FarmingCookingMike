@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum  IngredientState
 {
-   Raw, MediumRare ,Cooked, Overcooked, Chopped, Smashed
+   Raw, MediumRare ,Cooked, Overcooked, Chopped, Smashed, None
 }
 public class Ingredient : MonoBehaviour
 {
@@ -34,7 +34,8 @@ public class Ingredient : MonoBehaviour
          _chopTimer += Time.deltaTime * modifier;
          Debug.Log("Chopping: "+_chopTimer);
          //Update UI
-         station.ShowUI(true);
+         station.ShowProgressUI(true, IngredientState.Chopped);
+         station.ShowInteractUI(false);
          station.UpdateUI(GetChopProgress());
       }
       else
@@ -42,7 +43,8 @@ public class Ingredient : MonoBehaviour
          //Finish chopping
          _ingredientState = IngredientState.Chopped;
          _chopTimer = 0;
-         station.ShowUI(false);
+         station.ShowProgressUI(false);
+         station.ShowInteractUI(true,this.gameObject);
          UpdateModel();
       }
       
@@ -59,14 +61,17 @@ public class Ingredient : MonoBehaviour
          _chopTimer += Time.deltaTime * modifier;
          Debug.Log("Smashing: "+_chopTimer);
          //Update UI
-         station.ShowUI(true);
+         //station.ShowUI(true, IngredientState.Smashed);
+         station.ShowProgressUI(true, IngredientState.Smashed);
+         station.ShowInteractUI(false);
          station.UpdateUI(GetSmashProgress());
       }
       else
       {
          //Finish Smashing
          _ingredientState = IngredientState.Smashed;
-         station.ShowUI(false);
+         station.ShowProgressUI(false);
+         station.ShowInteractUI(true, this.gameObject);
          _chopTimer = 0;
          UpdateModel();
       }
@@ -96,6 +101,8 @@ public class Ingredient : MonoBehaviour
       
       while (_ingredientState != IngredientState.Overcooked)
       {
+         _workstation.Warning(false);
+
          while(_ingredientState != IngredientState.Cooked)//Proceso para que se cocine la comida
          {
             Debug.Log("Cooking: " +_cookingTimer);
@@ -114,7 +121,8 @@ public class Ingredient : MonoBehaviour
 
             yield return null;
          }
-
+         
+         _workstation.Warning(true);
          while(_ingredientState == IngredientState.Cooked)//Proceso para que se queme la comida
          {
             Debug.Log("OverCooking: " +_cookingTimer);

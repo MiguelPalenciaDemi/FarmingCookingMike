@@ -7,6 +7,7 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
     [SerializeField] protected Transform objectPosition;
     [SerializeField] protected float speedCooking = 1;
     [SerializeField] protected ProgressWidget widgetUI;
+    [SerializeField] protected InteractWidget interactUI;
     protected GameObject _objectInWorktop;
 
 
@@ -27,11 +28,13 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
         {
             player.TakeObject(_objectInWorktop);
             _objectInWorktop = null;
-            ShowUI(false);
+            ShowProgressUI(false);
+            ShowInteractUI(false);
         }
         else if(player.ObjectPickedUp && !_objectInWorktop)
         {
             DropObject(player);
+            ShowInteractUI(true, _objectInWorktop);
         }
        
     }
@@ -54,9 +57,26 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
         widgetUI.UpdateUI(progress);
     }
 
-    public void ShowUI(bool value)
+    public void ShowProgressUI(bool progressUIValue, IngredientState state = IngredientState.None)
     {
-        widgetUI.gameObject.SetActive(value);
+        if(state != IngredientState.None)
+            widgetUI.ChangeIcon(state);
+        
+        widgetUI.gameObject.SetActive(progressUIValue);
+        //interactUI.Hide();
+    }
+
+    public void ShowInteractUI(bool value,GameObject ingredient = null, IngredientState state = IngredientState.None)
+    {
+        if(value && ingredient)
+            interactUI.Show(ingredient);
+        else
+            interactUI.Hide();
+    }
+
+    public void Warning(bool value)
+    {
+        widgetUI.SetWarning(value);
     }
     
 }

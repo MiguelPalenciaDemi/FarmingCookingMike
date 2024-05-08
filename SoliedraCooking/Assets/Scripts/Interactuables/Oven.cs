@@ -48,7 +48,9 @@ public class Oven : Workstation
         ingredient.Cook(this,speedCooking);
         _animator.SetBool(IsOpenAnim, false);
         isOpen = false;        
-        ShowUI(true);
+        //ShowUI(true, IngredientState.Cooked);
+        ShowProgressUI(true,IngredientState.Cooked);
+        ShowInteractUI(false);
 
     }
 
@@ -57,7 +59,10 @@ public class Oven : Workstation
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
         isOpen = true;      
-        ShowUI(false);
+        //ShowUI(true, IngredientState.Cooked);
+        ShowProgressUI(false);
+        ShowInteractUI(true,ingredient.gameObject);
+        //interactUI.Show(ingredient.gameObject);
 
     }
 
