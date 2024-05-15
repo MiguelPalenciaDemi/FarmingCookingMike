@@ -3,10 +3,7 @@ using System.Collections;
 using System.Timers;
 using UnityEngine;
 
-public enum  IngredientState
-{
-   Raw, MediumRare ,Cooked, Overcooked, Chopped, Smashed, None
-}
+
 public class Ingredient : MonoBehaviour
 {
    [SerializeField] private IngredientInfo ingredientInfo;

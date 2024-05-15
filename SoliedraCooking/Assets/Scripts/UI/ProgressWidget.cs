@@ -8,8 +8,7 @@ using UnityEngine.UI;
 public class ProgressWidget : MonoBehaviour
 {
     [SerializeField] private Image progress;
-    [SerializeField] private List<InteractWidget.InteractIcon> icons;
-    
+    [SerializeField] private List<InteractIcon> icons;
     [SerializeField] private Color normalColor;
     [SerializeField] private Color warningColor;
     

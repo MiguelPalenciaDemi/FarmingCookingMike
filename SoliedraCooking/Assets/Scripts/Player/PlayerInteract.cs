@@ -22,16 +22,6 @@ public class PlayerInteract : MonoBehaviour
     private void Update()
     {
         CheckInteract();
-        
-        // if (_canInteract && Input.GetButtonDown("Interact")) 
-        // {
-        //     _objectInteractable.Interact(this);
-        // }
-        //
-        // if (_canTakeDrop && Input.GetButtonDown("TakeDrop"))
-        // {
-        //     _objectPickable.TakeDrop(this);
-        // }
     }
 
     public void TakeDropInput()
@@ -55,9 +45,7 @@ public class PlayerInteract : MonoBehaviour
         {
             _canInteract = false;
             _canTakeDrop = false;
-            // if(_objectInteractable != null) //Si antes podiamos interactuar con algo, desactivamos su UI
-            //     _objectInteractable.ShowUI(false);
-            //
+            
             _objectInteractable = null;
             _objectPickable = null;
             return;
@@ -67,7 +55,7 @@ public class PlayerInteract : MonoBehaviour
         {
             _canInteract = true;
             _objectInteractable = interactable;
-           // _objectInteractable.ShowUI(true);
+           
         }
         
         if(hit.collider.TryGetComponent<ITakeDrop>(out var pickable ))

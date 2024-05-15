@@ -10,47 +10,29 @@ public class Worktop : Workstation
    {
       if(!_objectInWorktop) return; //If there isn't any obj to interact we exit
       
-
-      //_objectInWorktop.TryGetComponent(out Plate plate);
       _objectInWorktop.TryGetComponent(out Ingredient ingredient);
       
-      // //Is a Plate and we have an ingredient in our hand?
-      // if (plate && player.ObjectPickedUp)
-      // {
-      //    player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient);
-      //    if (playerIngredient)
-      //    {
-      //       plate.AddIngredient(playerIngredient.GetIngredientStruct());
-      //       Destroy(player.DropObject());
-      //    }
-      //
-      // }
-      // else
+      //Is an ingredient?  
+      if (!ingredient) return;
+      
+      var state = ingredient.GetState();
+      var info = ingredient.GetIngredientInfo();
+
+
+      if (info.IsChoppable && state != IngredientState.Chopped && state != IngredientState.Smashed)
       {
-         //Is an ingredient?  
-         if (!ingredient) return;
-         
-         var state = ingredient.GetState();
-         var info = ingredient.GetIngredientInfo();
+         //ShowUI(IngredientState.Chopped,true);
 
-
-         if (info.IsChoppable && state != IngredientState.Chopped && state != IngredientState.Smashed)
-         {
-            //ShowUI(IngredientState.Chopped,true);
-
-            ingredient.Chop(this,speedCooking);
-            widgetUI.UpdateUI(ingredient.GetChopProgress());
-         }
-         else if (info.IsSmashable && state != IngredientState.Smashed)
-         {
-            //ShowUI(IngredientState.Smashed,true);
-            ingredient.Smash(this,speedCooking);
-            widgetUI.UpdateUI(ingredient.GetSmashProgress());
-         }
-         
+         ingredient.Chop(this,speedCooking);
+         widgetUI.UpdateUI(ingredient.GetChopProgress());
       }
-      
-      
+      else if (info.IsSmashable && state != IngredientState.Smashed)
+      {
+         //ShowUI(IngredientState.Smashed,true);
+         ingredient.Smash(this,speedCooking);
+         widgetUI.UpdateUI(ingredient.GetSmashProgress());
+      }
+         
    }
 
    public override void TakeDrop(PlayerInteract player)

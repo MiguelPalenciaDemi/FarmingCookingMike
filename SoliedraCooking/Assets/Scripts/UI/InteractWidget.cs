@@ -7,12 +7,7 @@ using UnityEngine.UI;
 
 public class InteractWidget : MonoBehaviour
 {
-    [Serializable]
-    public struct InteractIcon
-    {
-        public GameObject icon;
-        public IngredientState state;
-    }
+    
 
     [SerializeField] private List<InteractIcon> icons;
     [SerializeField] private GameObject panel;

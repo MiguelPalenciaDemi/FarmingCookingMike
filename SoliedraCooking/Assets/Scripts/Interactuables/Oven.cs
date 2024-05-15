@@ -22,6 +22,7 @@ public class Oven : Workstation
         //First get the ingredient   
         _objectInWorktop.TryGetComponent(out Ingredient ingredient);
         if (!ingredient) return;
+        if (ingredient.GetState() == IngredientState.Overcooked) return;
       
         if (isOpen)
         {
@@ -59,11 +60,9 @@ public class Oven : Workstation
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
         isOpen = true;      
-        //ShowUI(true, IngredientState.Cooked);
+        
         ShowProgressUI(false);
         ShowInteractUI(true,ingredient.gameObject);
-        //interactUI.Show(ingredient.gameObject);
-
     }
 
     public override void TakeDrop(PlayerInteract player)
