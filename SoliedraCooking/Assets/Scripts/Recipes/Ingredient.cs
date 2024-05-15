@@ -18,20 +18,21 @@ public class Ingredient : MonoBehaviour
    public void Start()
    {
       _ingredientState = IngredientState.Raw;
-      UpdateModel();
+      UpdateModel(ingredientInfo);
    }
 
    // ReSharper disable Unity.PerformanceAnalysis
    public void Chop(Workstation station, float modifier = 1)
    {
-      if (!ingredientInfo.IsChoppable || _ingredientState == IngredientState.Chopped) return;
+      //if (!ingredientInfo.IsChoppable || _ingredientState == IngredientState.Chopped) return;
+      if (!ingredientInfo.CanDoAction(CookAction.Chop)) return;
 
-      if (_chopTimer < ingredientInfo.TimeChop)
+      if (_chopTimer < ingredientInfo.GetTime(CookAction.Chop))
       {
          _chopTimer += Time.deltaTime * modifier;
          Debug.Log("Chopping: "+_chopTimer);
          //Update UI
-         station.ShowProgressUI(true, IngredientState.Chopped);
+         station.ShowProgressUI(true, CookAction.Chop);
          station.ShowInteractUI(false);
          station.UpdateUI(GetChopProgress());
       }
@@ -40,9 +41,10 @@ public class Ingredient : MonoBehaviour
          //Finish chopping
          _ingredientState = IngredientState.Chopped;
          _chopTimer = 0;
+         
+         UpdateModel(ingredientInfo.CompleteAction(CookAction.Chop));
          station.ShowProgressUI(false);
          station.ShowInteractUI(true,this.gameObject);
-         UpdateModel();
       }
       
    }
@@ -51,15 +53,15 @@ public class Ingredient : MonoBehaviour
    public void Smash(Workstation station,float modifier = 1)
    {
       
-      if(!ingredientInfo.IsSmashable || _ingredientState == IngredientState.Smashed) return;
+      if(!ingredientInfo.CanDoAction(CookAction.Smash)) return;
       
-      if (_chopTimer < ingredientInfo.TimeSmash)
+      if (_chopTimer < ingredientInfo.GetTime(CookAction.Smash))
       {
          _chopTimer += Time.deltaTime * modifier;
          Debug.Log("Smashing: "+_chopTimer);
          //Update UI
          //station.ShowUI(true, IngredientState.Smashed);
-         station.ShowProgressUI(true, IngredientState.Smashed);
+         station.ShowProgressUI(true, CookAction.Smash);
          station.ShowInteractUI(false);
          station.UpdateUI(GetSmashProgress());
       }
@@ -67,10 +69,11 @@ public class Ingredient : MonoBehaviour
       {
          //Finish Smashing
          _ingredientState = IngredientState.Smashed;
+         UpdateModel(ingredientInfo.CompleteAction(CookAction.Smash));
+         
          station.ShowProgressUI(false);
          station.ShowInteractUI(true, this.gameObject);
          _chopTimer = 0;
-         UpdateModel();
       }
    }
 
@@ -87,6 +90,9 @@ public class Ingredient : MonoBehaviour
       if (_cookingCoroutine == null) return;
       StopCoroutine(_cookingCoroutine);
       
+      if(_ingredientState == IngredientState.Cooked) 
+         UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
+      
       _cookingCoroutine = null;
       _workstation = null;
 
@@ -95,7 +101,7 @@ public class Ingredient : MonoBehaviour
    // ReSharper disable Unity.PerformanceAnalysis
    private IEnumerator Cooking(float modifier)
    {
-      
+      var cookTime = ingredientInfo.GetTime(CookAction.Cook);
       while (_ingredientState != IngredientState.Overcooked)
       {
          _workstation.Warning(false);
@@ -108,10 +114,10 @@ public class Ingredient : MonoBehaviour
             //Actualizamos la UI
             _workstation.UpdateUI(GetCookedProgress());
 
-            if (_cookingTimer > ingredientInfo.TimeCooking)
+            if (_cookingTimer > cookTime)
             {
                _ingredientState = IngredientState.Cooked;
-               UpdateModel();
+               //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE
                _cookingTimer = 0;
                //Do VFX things
             }
@@ -128,10 +134,10 @@ public class Ingredient : MonoBehaviour
             //Actualizamos la UI
             _workstation.UpdateUI(GetOvercookedProgress());
 
-            if (_cookingTimer > ingredientInfo.TimeOverCook)
+            if (_cookingTimer > cookTime * 0.5f)
             {
                _ingredientState = IngredientState.Overcooked;
-               UpdateModel();
+               //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE
                _workstation.ForceStopInteract();
                //Do VFX things
             }
@@ -144,15 +150,18 @@ public class Ingredient : MonoBehaviour
       yield return null;
    }
    
-   public void UpdateModel()
+   public void UpdateModel(IngredientInfo ingredient)
    {
-      var model = ingredientInfo.GetModel(_ingredientState); //Get the new model from ingredient data
+      
+      var model = ingredient.GetModel(); //Get the new model from ingredient data
       if (!model) return; //None model found we avoid to delete current food model
       
       CleanModel();
       var newModel = Instantiate(model, modelParent);
       newModel.transform.localPosition = Vector3.zero;
       newModel.transform.localRotation = Quaternion.identity;
+
+      ingredientInfo = ingredient;
    }
 
    private void CleanModel()
@@ -163,6 +172,10 @@ public class Ingredient : MonoBehaviour
       }
    }
 
+   public bool CanDoAction(CookAction action)
+   {
+      return ingredientInfo.CanDoAction(action);
+   }
    public FoodTag GetFoodTag()
    {
       return ingredientInfo.FoodTag;
@@ -185,22 +198,22 @@ public class Ingredient : MonoBehaviour
 
    public float GetChopProgress()
    {
-      return _chopTimer / ingredientInfo.TimeChop;
+      return _chopTimer / ingredientInfo.GetTime(CookAction.Chop);
    }
    
    public float GetSmashProgress()
    {
-      return _chopTimer / ingredientInfo.TimeSmash;
+      return _chopTimer / ingredientInfo.GetTime(CookAction.Smash);
    }
    
    public float GetCookedProgress()
    {
-      return _cookingTimer / ingredientInfo.TimeCooking;
+      return _cookingTimer / ingredientInfo.GetTime(CookAction.Cook);
    }
    
    public float GetOvercookedProgress()
    {
-      return _cookingTimer /ingredientInfo.TimeOverCook;
+      return _cookingTimer /(ingredientInfo.GetTime(CookAction.Cook)*0.5f);
    }
 
    public void CleanWorkstation()

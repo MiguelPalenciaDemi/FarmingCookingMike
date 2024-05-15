@@ -22,7 +22,7 @@ public class Oven : Workstation
         //First get the ingredient   
         _objectInWorktop.TryGetComponent(out Ingredient ingredient);
         if (!ingredient) return;
-        if (ingredient.GetState() == IngredientState.Overcooked) return;
+        if (!ingredient.CanDoAction(CookAction.Cook)) return;
       
         if (isOpen)
         {
@@ -49,8 +49,8 @@ public class Oven : Workstation
         ingredient.Cook(this,speedCooking);
         _animator.SetBool(IsOpenAnim, false);
         isOpen = false;        
-        //ShowUI(true, IngredientState.Cooked);
-        ShowProgressUI(true,IngredientState.Cooked);
+        
+        ShowProgressUI(true,CookAction.Cook);
         ShowInteractUI(false);
 
     }

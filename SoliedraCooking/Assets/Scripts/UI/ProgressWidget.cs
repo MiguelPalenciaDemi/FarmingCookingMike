@@ -22,10 +22,10 @@ public class ProgressWidget : MonoBehaviour
         progress.fillAmount = newValue;
     }
 
-    public void ChangeIcon(IngredientState type)
+    public void ChangeIcon(CookAction type)
     {
         Hide();
-        icons.Find(x =>x.state == type).icon.SetActive(true);
+        icons.Find(x =>x.action == type).icon.SetActive(true);
     }
     
     public void Hide()

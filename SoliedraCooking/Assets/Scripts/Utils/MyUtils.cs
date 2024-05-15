@@ -1,12 +1,13 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public struct InteractIcon
 {
     public GameObject icon;
-    public IngredientState state;
+    [FormerlySerializedAs("action")] public CookAction action;
 }
 
 
@@ -44,7 +45,7 @@ public enum  IngredientState
     Raw, MediumRare ,Cooked, Overcooked, Chopped, Smashed, None
 }
 
-public enum CookActions
+public enum CookAction
 {
-    Cook,Smash,Chop
+    Cook,Smash,Chop,None
 }

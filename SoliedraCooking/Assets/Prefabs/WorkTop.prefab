@@ -402,9 +402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icons:
   - icon: {fileID: 2177884692022609344}
-    state: 4
+    action: 2
   - icon: {fileID: 516383568932944793}
-    state: 5
+    action: 1
   panel: {fileID: 5271663521172535695}
 --- !u!1001 &4246393237227153148
 PrefabInstance:
@@ -449,6 +449,14 @@ PrefabInstance:
     - target: {fileID: 2652804831833665390, guid: 5af5e60ecca1e5a4c82ef6aa9d7616e2, type: 3}
       propertyPath: warningColor.r
       value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652804831833665390, guid: 5af5e60ecca1e5a4c82ef6aa9d7616e2, type: 3}
+      propertyPath: icons.Array.data[1].action
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652804831833665390, guid: 5af5e60ecca1e5a4c82ef6aa9d7616e2, type: 3}
+      propertyPath: icons.Array.data[2].action
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3055003540321042723, guid: 5af5e60ecca1e5a4c82ef6aa9d7616e2, type: 3}
       propertyPath: m_Pivot.x
@@ -565,7 +573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -970.9
+      value: -972.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.y

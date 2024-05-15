@@ -27,16 +27,20 @@ public class InteractWidget : MonoBehaviour
         
         if(ingredient.GetState() == IngredientState.Overcooked) return; //Si esta quemado no mostramos nada;
         
-        var states = GetIngredientStates(ingredient);
+        var states = GetIngredientActions(ingredient);
         
        //Mostramos todos los que correspondan
         foreach (var state in states)
         {
-            panel.SetActive(true);
-            var index = icons.FindIndex(x => x.state == state);
-            if(index != -1)
+            var index = icons.FindIndex(x => x.action == state);
+            if (index != -1)
+            {
                 icons[index].icon.SetActive(true);
+                panel.SetActive(true);
+            }
+            
         }
+        
     }
 
     public void Hide()
@@ -47,17 +51,17 @@ public class InteractWidget : MonoBehaviour
         foreach (var item in icons)
             item.icon.SetActive(false);
     }
-    private List<IngredientState> GetIngredientStates(Ingredient ingredient)
+    private List<CookAction> GetIngredientActions(Ingredient ingredient)
     {
-        var states = new List<IngredientState>();
-        if(ingredient.GetIngredientInfo().IsChoppable && ingredient.GetState() != IngredientState.Chopped)
-            states.Add(IngredientState.Chopped);
-        if(ingredient.GetIngredientInfo().IsSmashable && ingredient.GetState() != IngredientState.Smashed )
-            states.Add(IngredientState.Smashed);
-        if(ingredient.GetIngredientInfo().TimeCooking>0)
-            states.Add(IngredientState.Cooked);
+        var actions = new List<CookAction>();
+        if(ingredient.GetIngredientInfo().CanDoAction(CookAction.Chop))
+            actions.Add(CookAction.Chop);
+        if(ingredient.GetIngredientInfo().CanDoAction(CookAction.Cook))
+            actions.Add(CookAction.Cook);
+        if(ingredient.GetIngredientInfo().CanDoAction(CookAction.Smash))
+            actions.Add(CookAction.Smash);
 
-        return states;
+        return actions;
     }
 
     

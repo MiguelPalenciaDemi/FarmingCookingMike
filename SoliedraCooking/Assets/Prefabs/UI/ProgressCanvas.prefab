@@ -166,7 +166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &530479578284422137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -202,11 +202,13 @@ MonoBehaviour:
   progress: {fileID: 7906980840076077691}
   icons:
   - icon: {fileID: 268018689709255971}
-    state: 2
+    action: 0
   - icon: {fileID: 8693076619898874196}
-    state: 4
+    action: 2
   - icon: {fileID: 4673125910908139072}
-    state: 5
+    action: 1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  warningColor: {r: 0.9622642, g: 0.49999034, b: 0.031772893, a: 1}
 --- !u!1 &1837066243331004654
 GameObject:
   m_ObjectHideFlags: 0

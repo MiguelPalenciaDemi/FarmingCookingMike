@@ -57,10 +57,10 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
         widgetUI.UpdateUI(progress);
     }
 
-    public void ShowProgressUI(bool progressUIValue, IngredientState state = IngredientState.None)
+    public void ShowProgressUI(bool progressUIValue, CookAction action= CookAction.None)
     {
-        if(state != IngredientState.None)
-            widgetUI.ChangeIcon(state);
+        if(action != CookAction.None)
+            widgetUI.ChangeIcon(action);
         
         widgetUI.gameObject.SetActive(progressUIValue);
         //interactUI.Hide();

@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16
+      value: -972.875
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.163387
+      value: -539.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.234262
+      value: -4.8680024
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a22763e3b32734c963aefa084f0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 5185751563349507247, guid: 6968ded8d52c6ff4ebefab5d5357c04f, type: 3}
-  amount: 5
+  foodPrefab: {fileID: 3914540481097683585, guid: 1e6ed552735a1364d85b25eab3a08d5b, type: 3}
+  amount: 2

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ba806b3707f744d896fa288126c39d, type: 3}
+  m_Name: Flour
+  m_EditorClassIdentifier: 
+  foodTag: 5
+  model: {fileID: 919132149155446097, guid: ce1af952d7951554bacc0a43f5042d43, type: 3}
+  ingredientModels:
+    rawModel: {fileID: 0}
+    mediumRare: {fileID: 0}
+    cooked: {fileID: 0}
+    overcooked: {fileID: 0}
+    chopped: {fileID: 0}
+    smashed: {fileID: 0}
+  actions:
+  - _action: 1
+    _ingredientResult: {fileID: 11400000, guid: 05341e209b6dce442b34ca3eb775ded1, type: 2}
+    _time: 1

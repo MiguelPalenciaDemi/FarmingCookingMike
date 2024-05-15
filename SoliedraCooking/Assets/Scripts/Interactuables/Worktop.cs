@@ -19,14 +19,14 @@ public class Worktop : Workstation
       var info = ingredient.GetIngredientInfo();
 
 
-      if (info.IsChoppable && state != IngredientState.Chopped && state != IngredientState.Smashed)
+      if (info.CanDoAction(CookAction.Chop))
       {
          //ShowUI(IngredientState.Chopped,true);
 
          ingredient.Chop(this,speedCooking);
          widgetUI.UpdateUI(ingredient.GetChopProgress());
       }
-      else if (info.IsSmashable && state != IngredientState.Smashed)
+      else if (info.CanDoAction(CookAction.Smash))
       {
          //ShowUI(IngredientState.Smashed,true);
          ingredient.Smash(this,speedCooking);
