@@ -46,8 +46,9 @@ public class Worktop : Workstation
          {
             player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient);
             if (!playerIngredient) return;
-            plate.AddIngredient(playerIngredient.GetIngredientStruct());
+            plate.AddIngredient(playerIngredient.GetIngredientInfo());
             Destroy(player.DropObject());
+
             return;
          }
          
@@ -57,9 +58,11 @@ public class Worktop : Workstation
          {
             player.ObjectPickedUp.TryGetComponent(out plate);
             if (!plate) return;
-            plate.AddIngredient(ingredient.GetIngredientStruct());
+            plate.AddIngredient(ingredient.GetIngredientInfo());
             Destroy(ingredient.gameObject);
             DropObject(player);
+            ShowInteractUI(false);
+
             return;
          }
       }

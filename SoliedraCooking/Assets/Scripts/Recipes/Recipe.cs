@@ -6,23 +6,23 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newRecipe",menuName = "Recipe")]
 public class Recipe : ScriptableObject
 {
-    [SerializeField] private List<IngredientRecipeStruct> ingredients;
+    [SerializeField] private List<IngredientInfo> ingredients;
     [SerializeField] private Sprite recipeImage;
-    public List<IngredientRecipeStruct> Ingredients => ingredients;
+    public List<IngredientInfo> Ingredients => ingredients;
 
     public Sprite RecipeImage => recipeImage;
 
 
-    public bool ComparePlate(List<IngredientRecipeStruct> plateIngredients)
+    public bool ComparePlate(List<IngredientInfo> plateIngredients)
     {
         if (plateIngredients.Count != ingredients.Count) return false;
         
-        var tempList = new List<IngredientRecipeStruct>(ingredients);
+        var tempList = new List<IngredientInfo>(ingredients);
 
         foreach (var otherIngredient in plateIngredients) //Comprobamos todos los componentes del plato
         {
             var index = tempList.FindIndex(x =>
-                x.Compare(otherIngredient)); //Buscamos que nuestro ingrediente se encuentre en la receta
+                x == otherIngredient); //Buscamos que nuestro ingrediente se encuentre en la receta
 
             if (index == -1)
                 return false;

@@ -59,6 +59,8 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
 
     public void ShowProgressUI(bool progressUIValue, CookAction action= CookAction.None)
     {
+        if(!widgetUI) return;
+        
         if(action != CookAction.None)
             widgetUI.ChangeIcon(action);
         
@@ -68,6 +70,8 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
 
     public void ShowInteractUI(bool value,GameObject ingredient = null, IngredientState state = IngredientState.None)
     {
+        if(!interactUI)return;
+        
         if(value && ingredient)
             interactUI.Show(ingredient);
         else

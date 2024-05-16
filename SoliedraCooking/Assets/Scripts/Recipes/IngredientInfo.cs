@@ -31,33 +31,14 @@ public class IngredientInfo : ScriptableObject
 {
     [SerializeField] private FoodTag foodTag;
     [SerializeField] private GameObject model;
-    [SerializeField] private IngredientModels ingredientModels;
+    [SerializeField] private GameObject spoiledModel;
+    private bool _isSpoiled = false; 
+    
     
     [Header("Cooking Properties")]
     [SerializeField] private List<CookActionStruct> actions;
-    // [SerializeField] private float timeCooking;
-    // [SerializeField] private float timeOverCook;
-    // [SerializeField] private float timeChop;
-    // [SerializeField] private float timeSmash;
-    // [SerializeField] private bool isChoppable;
-    // [SerializeField] private bool isSmashable;
+    
 
-
-    public IngredientModels Models => ingredientModels;
-
-    // public GameObject GetModel(IngredientState state)
-    // {
-    //     return state switch
-    //     {
-    //         IngredientState.Raw => ingredientModels.rawModel,
-    //         IngredientState.MediumRare => ingredientModels.mediumRare,
-    //         IngredientState.Cooked => ingredientModels.cooked,
-    //         IngredientState.Overcooked => ingredientModels.overcooked,
-    //         IngredientState.Chopped => ingredientModels.chopped,
-    //         IngredientState.Smashed => ingredientModels.smashed,
-    //         _ => ingredientModels.rawModel
-    //     };
-    // }
 
     public GameObject GetModel() => model;
     
@@ -83,5 +64,11 @@ public class IngredientInfo : ScriptableObject
         var index = actions.FindLastIndex(x => x.Action == action);
         return index != -1; //Se puede realizar dicha acción
         
+    }
+
+    public GameObject GetSpoiledModel()
+    {
+        _isSpoiled = true;
+        return spoiledModel;
     }
 }

@@ -92,6 +92,8 @@ public class Ingredient : MonoBehaviour
       
       if(_ingredientState == IngredientState.Cooked) 
          UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
+      else if(_ingredientState == IngredientState.Overcooked)
+         UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook),true);
       
       _cookingCoroutine = null;
       _workstation = null;
@@ -150,10 +152,10 @@ public class Ingredient : MonoBehaviour
       yield return null;
    }
    
-   public void UpdateModel(IngredientInfo ingredient)
+   public void UpdateModel(IngredientInfo ingredient, bool isSpoiled = false)
    {
       
-      var model = ingredient.GetModel(); //Get the new model from ingredient data
+      var model = isSpoiled? ingredient.GetSpoiledModel() : ingredient.GetModel(); //Get the new model from ingredient data, if it's spoiled 
       if (!model) return; //None model found we avoid to delete current food model
       
       CleanModel();

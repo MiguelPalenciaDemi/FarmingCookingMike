@@ -14,11 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodTag: 0
   model: {fileID: 919132149155446097, guid: 8bcc5feaeda8b1c44b75e832df32a3e1, type: 3}
-  ingredientModels:
-    rawModel: {fileID: 919132149155446097, guid: d6c9913ec7c95b0418e2cc04b1f4617e, type: 3}
-    mediumRare: {fileID: 919132149155446097, guid: 8bcc5feaeda8b1c44b75e832df32a3e1, type: 3}
-    cooked: {fileID: 919132149155446097, guid: 8bcc5feaeda8b1c44b75e832df32a3e1, type: 3}
-    overcooked: {fileID: 919132149155446097, guid: 6f0c93a8709a38a4fbcdf02f8c043bd9, type: 3}
-    chopped: {fileID: 919132149155446097, guid: bb3137e15f93bf54cb4b4f81d041feac, type: 3}
-    smashed: {fileID: 919132149155446097, guid: 82045c330c93dd3469279b41a0de62f3, type: 3}
+  spoiledModel: {fileID: 919132149155446097, guid: 6f0c93a8709a38a4fbcdf02f8c043bd9, type: 3}
   actions: []
