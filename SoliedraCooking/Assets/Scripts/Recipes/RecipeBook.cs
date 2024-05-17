@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -13,7 +14,16 @@ public class RecipeBook : ScriptableObject
         var randomIndex = Random.Range(0, recipes.Count);
         return recipes[randomIndex];
     }
-    
-    
+
+    public bool SearchMatchRecipe(List<IngredientInfo> ingredients)
+    {
+        return recipes.Any(recipe => recipe.ComparePlate(ingredients));
+    }
+
+    //Comprueba que los ingredientes coinciden con alguna receta
+    public bool ValidIngredients(List<IngredientInfo> ingredients)
+    {
+        return recipes.Any(recipe => recipe.CheckProcessRecipe(ingredients));
+    }
     
 }

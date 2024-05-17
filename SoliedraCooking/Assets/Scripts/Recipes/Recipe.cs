@@ -12,11 +12,23 @@ public class Recipe : ScriptableObject
 
     public Sprite RecipeImage => recipeImage;
 
-
+    //Compromabos si la receta está realizada correctamente.
     public bool ComparePlate(List<IngredientInfo> plateIngredients)
     {
         if (plateIngredients.Count != ingredients.Count) return false;
-        
+
+        return CheckIngredients(plateIngredients);
+    }
+
+    //Nos va a indicar si estamos haciendo correctamente una receta (para ver si podemos añadir un ingrediente o no)
+    public bool CheckProcessRecipe(List<IngredientInfo> plateIngredients)
+    {
+        if (plateIngredients.Count > ingredients.Count) return false;
+        return CheckIngredients(plateIngredients);
+    }
+
+    private bool CheckIngredients(List<IngredientInfo> plateIngredients)
+    {
         var tempList = new List<IngredientInfo>(ingredients);
 
         foreach (var otherIngredient in plateIngredients) //Comprobamos todos los componentes del plato
@@ -32,8 +44,6 @@ public class Recipe : ScriptableObject
         
         return true;
     }
-    
-    
 }
 
 

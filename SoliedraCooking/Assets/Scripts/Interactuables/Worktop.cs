@@ -34,7 +34,7 @@ public class Worktop : Workstation
       }
          
    }
-
+   // Sobreescribimos para añadir la funcionalidad de mezclar ingredientes
    public override void TakeDrop(PlayerInteract player)
    {
       if (_objectInWorktop && player.ObjectPickedUp)
@@ -46,8 +46,8 @@ public class Worktop : Workstation
          {
             player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient);
             if (!playerIngredient) return;
-            plate.AddIngredient(playerIngredient.GetIngredientInfo());
-            Destroy(player.DropObject());
+            if(plate.AddIngredient(playerIngredient.GetIngredientInfo()))
+               Destroy(player.DropObject());
 
             return;
          }
@@ -58,10 +58,13 @@ public class Worktop : Workstation
          {
             player.ObjectPickedUp.TryGetComponent(out plate);
             if (!plate) return;
-            plate.AddIngredient(ingredient.GetIngredientInfo());
-            Destroy(ingredient.gameObject);
-            DropObject(player);
-            ShowInteractUI(false);
+            
+            if (plate.AddIngredient(ingredient.GetIngredientInfo()))
+            {
+               Destroy(ingredient.gameObject);
+               DropObject(player);
+               ShowInteractUI(false);
+            }
 
             return;
          }

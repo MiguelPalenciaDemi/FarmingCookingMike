@@ -65,7 +65,6 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
             widgetUI.ChangeIcon(action);
         
         widgetUI.gameObject.SetActive(progressUIValue);
-        //interactUI.Hide();
     }
 
     public void ShowInteractUI(bool value,GameObject ingredient = null, IngredientState state = IngredientState.None)

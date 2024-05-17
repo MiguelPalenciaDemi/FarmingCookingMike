@@ -6,15 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Burger.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Burger.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FoodMeat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FoodMeat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Bread.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Bread.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/StartRecipeBook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/StartRecipeBook.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Plate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Ingredient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/MyUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/MyUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +138,8 @@
       <workItem from="1715673786470" duration="1042000" />
       <workItem from="1715765037723" duration="10035000" />
       <workItem from="1715853546832" duration="3123000" />
+      <workItem from="1715936524052" duration="7520000" />
+      <workItem from="1715953959256" duration="1956000" />
     </task>
     <servers />
   </component>

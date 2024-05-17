@@ -15,11 +15,13 @@ public class Plate : MonoBehaviour
         _ingredients = new List<IngredientInfo>();
     }
 
-    public void AddIngredient(IngredientInfo newIngredient)
+    public bool AddIngredient(IngredientInfo newIngredient)
     {
-        //if(_ingredients.Exists(x => x.Compare(newIngredient))) //Comprobamos que ya tenemos este ingrediente
-        _ingredients.Add(newIngredient);
+        if (!CanAddIngredient(newIngredient)) return false;
         
+        _ingredients.Add(newIngredient);
+        return true;
+
         //Change Model depend on ingredients in plate
     }
 
@@ -32,5 +34,12 @@ public class Plate : MonoBehaviour
         {
             Destroy(model.gameObject);
         }
+    }
+    
+    private bool CanAddIngredient(IngredientInfo ingredient)
+    {
+        var tempIngredients =  new List<IngredientInfo>(_ingredients) { ingredient };
+
+        return FoodManager.Instance.CheckPlateIngredients(tempIngredients);
     }
 }
