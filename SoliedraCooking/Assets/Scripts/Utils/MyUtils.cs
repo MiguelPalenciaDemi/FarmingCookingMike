@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -9,6 +10,34 @@ public struct InteractIcon
     public GameObject icon;
     public CookAction action;
 }
+
+[Serializable]
+public struct FoodModel
+{
+    [SerializeField] private List<IngredientInfo> _ingredients;
+    [SerializeField] private GameObject model;
+
+    public GameObject Model => model;
+
+    public bool MatchIngredients(List<IngredientInfo> otherIngredients)
+    {
+        if (_ingredients.Count != otherIngredients.Count) return false;
+
+        var tmpList = new List<IngredientInfo>(_ingredients);
+        foreach (var ingredient in otherIngredients)
+        {
+           var index = tmpList.FindIndex(x => x == ingredient);
+           if (index == -1) return false;
+           
+           tmpList.RemoveAt(index);
+        }
+
+        return tmpList.Count == 0;
+
+    }
+
+}
+
 
 public enum FoodTag{Ham,Cheese, Lettuce, Tomato, Bread, Flour}
 public enum  IngredientState

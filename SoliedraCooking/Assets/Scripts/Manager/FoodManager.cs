@@ -8,6 +8,7 @@ public class FoodManager : MonoBehaviour
     private static FoodManager _instance;
     public static FoodManager Instance => _instance;
 
+    [SerializeField] private ListOfFoodModels models;
     [SerializeField] private RecipeBook potRecipes;
     [SerializeField] private RecipeBook plateRecipes;
     private void Awake()
@@ -28,6 +29,11 @@ public class FoodManager : MonoBehaviour
     public bool CheckPlateIngredients(List<IngredientInfo> ingredients)
     {
         return plateRecipes.ValidIngredients(ingredients);
+    }
+
+    public GameObject GetFoodModel(List<IngredientInfo> ingredients)
+    {
+        return models.GetModel(ingredients);
     }
 
 }

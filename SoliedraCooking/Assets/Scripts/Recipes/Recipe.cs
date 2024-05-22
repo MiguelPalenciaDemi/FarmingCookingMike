@@ -24,6 +24,7 @@ public class Recipe : ScriptableObject
     public bool CheckProcessRecipe(List<IngredientInfo> plateIngredients)
     {
         if (plateIngredients.Count > ingredients.Count) return false;
+        
         return CheckIngredients(plateIngredients);
     }
 

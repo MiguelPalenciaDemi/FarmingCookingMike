@@ -6,12 +6,13 @@ using UnityEngine;
 public class FoodCrate : MonoBehaviour, ITakeDrop
 {
     [SerializeField] private GameObject foodPrefab;
+    [SerializeField] private IngredientInfo ingredientInfo;
     [SerializeField] private int amount;
     private FoodTag _foodItem;
 
     private void Awake()
     {
-        _foodItem = foodPrefab.GetComponent<Ingredient>().GetFoodTag();
+        _foodItem = ingredientInfo.FoodTag;
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -20,15 +21,23 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
         
         if (player.ObjectPickedUp == null && amount>0) //Si no tenemos algo en la mano lo podemos coger
         {
-            player.TakeObject(Instantiate(foodPrefab));
+            var food = Instantiate(foodPrefab);
+            food.TryGetComponent<Ingredient>(out var ingredient);
+            if (!ingredient)
+            {
+                Destroy(food);
+                return; //Si no contiene el script Ingredient no hacemos nada
+            }
+            ingredient.SetIngredientInfo(ingredientInfo);//Le indicamos que ingrediente es.
+            player.TakeObject(food);
             Debug.Log("Coger Objeto");
             amount--;
         }
         else if(player.ObjectPickedUp)
         {
             var ingredient = player.ObjectPickedUp.GetComponent<Ingredient>();
-            var objectPickedTag = ingredient.GetFoodTag();
-            if(objectPickedTag == _foodItem && ingredient.GetState() == IngredientState.Raw)//Check if we've got the same foodType in the hand and it's raw
+            
+            if(ingredient.GetIngredientInfo() == ingredientInfo)//Check if we've got the same foodType in the hand and it's raw
             {
                 Debug.Log("Dejar Objeto");
                 amount++;

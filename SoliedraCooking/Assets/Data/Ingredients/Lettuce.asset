@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ba806b3707f744d896fa288126c39d, type: 3}
-  m_Name: Tomato
+  m_Name: Lettuce
   m_EditorClassIdentifier: 
-  foodTag: 3
-  model: {fileID: 919132149155446097, guid: f35c0b1e82b8ad74cb1fa8980307397c, type: 3}
+  foodTag: 2
+  model: {fileID: 919132149155446097, guid: d6192eb05924f9e488c23f15ad2f75e5, type: 3}
   spoiledModel: {fileID: 0}
   actions:
   - _action: 2
-    _ingredientResult: {fileID: 11400000, guid: 4c1c1e638d92f3446a2344b97b90ce50, type: 2}
-    _time: 0.8
+    _ingredientResult: {fileID: 11400000, guid: 9612a0b6b91094f409230a49182607bd, type: 2}
+    _time: 1

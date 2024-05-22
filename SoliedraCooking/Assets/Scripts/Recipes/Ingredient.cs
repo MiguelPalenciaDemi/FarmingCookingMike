@@ -18,7 +18,8 @@ public class Ingredient : MonoBehaviour
    public void Start()
    {
       _ingredientState = IngredientState.Raw;
-      UpdateModel(ingredientInfo);
+      if(ingredientInfo)
+         UpdateModel(ingredientInfo);
    }
 
    // ReSharper disable Unity.PerformanceAnalysis
@@ -217,6 +218,12 @@ public class Ingredient : MonoBehaviour
    public void CleanWorkstation()
    {
       _workstation = null;
+   }
+
+   public void SetIngredientInfo(IngredientInfo info)
+   {
+      ingredientInfo = info;
+      UpdateModel(ingredientInfo);
    }
    
 }

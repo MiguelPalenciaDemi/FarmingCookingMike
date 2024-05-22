@@ -12,7 +12,7 @@ public class Pot : MonoBehaviour
 
     public bool AddIngredient(IngredientInfo ingredient)
     {
-        if (!CanAddIngredient(ingredient)) return false;
+        if (!_hasWater &&!CanAddIngredient(ingredient)) return false;
         
         _ingredients.Add(ingredient);
         return true;

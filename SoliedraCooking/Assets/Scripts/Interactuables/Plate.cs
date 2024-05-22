@@ -20,22 +20,43 @@ public class Plate : MonoBehaviour
         if (!CanAddIngredient(newIngredient)) return false;
         
         _ingredients.Add(newIngredient);
+
+        var model = FoodManager.Instance.GetFoodModel(_ingredients);
+        if(model)
+            SetModel(model);
         return true;
 
         //Change Model depend on ingredients in plate
     }
 
+    private void SetModel(GameObject model)
+    {
+        //primero limpiamos el estado actual
+        RemoveModel();
+        
+        //Instanciamos el nuevo
+        var newModel = Instantiate(model,modelParent);
+        
+        newModel.transform.localPosition = Vector3.zero;
+        newModel.transform.localRotation = Quaternion.identity;
+        
+    }
     public void Clean()
     {
         _ingredients.Clear();
-        
+
+        RemoveModel();
+    }
+
+    private void RemoveModel()
+    {
         //Remove model
         foreach (Transform model in modelParent)
         {
             Destroy(model.gameObject);
         }
     }
-    
+
     private bool CanAddIngredient(IngredientInfo ingredient)
     {
         var tempIngredients =  new List<IngredientInfo>(_ingredients) { ingredient };
