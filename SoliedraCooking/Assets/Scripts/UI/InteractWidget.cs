@@ -21,25 +21,41 @@ public class InteractWidget : MonoBehaviour
 
     public void Show(GameObject newObject)
     {
-        if (!newObject.TryGetComponent(out Ingredient ingredient)) return;//Comprobamos que es un ingrediente lo que hemos depositado
-        
-        Hide();
-        
-        if(ingredient.GetState() == IngredientState.Overcooked) return; //Si esta quemado no mostramos nada;
-        
-        var states = GetIngredientActions(ingredient);
-        
-       //Mostramos todos los que correspondan
-        foreach (var state in states)
+        if (newObject.TryGetComponent(out Ingredient ingredient))
         {
-            var index = icons.FindIndex(x => x.action == state);
+            Hide();
+            
+            if(ingredient.GetState() == IngredientState.Overcooked) return; //Si esta quemado no mostramos nada;
+            
+            var states = GetIngredientActions(ingredient);
+            
+           //Mostramos todos los que correspondan
+            foreach (var state in states)
+            {
+                var index = icons.FindIndex(x => x.action == state);
+                if (index != -1)
+                {
+                    icons[index].icon.SetActive(true);
+                    panel.SetActive(true);
+                }
+                
+            }
+            
+        }
+        else if (newObject.TryGetComponent(out Pot pot))
+        {
+            Hide();
+            if (!pot.CanCook()) return;
+            var index = icons.FindIndex(x => x.action == CookAction.Cook);
             if (index != -1)
             {
                 icons[index].icon.SetActive(true);
                 panel.SetActive(true);
             }
-            
         }
+
+        //return;//Comprobamos que es un ingrediente lo que hemos depositado}
+        
         
     }
 

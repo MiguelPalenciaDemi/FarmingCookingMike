@@ -6,19 +6,160 @@
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Tomato.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Tomato.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/PlateRecipeBook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/PlateRecipeBook.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/PotRecipeBook 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/PotRecipeBook 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/StartRecipeBook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/StartRecipeBook.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/KayKit Animated Character_v1.2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/KayKit Animated Character_v1.2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Attack(1h).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Attack(1h).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/AttackCombo.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/AttackCombo.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/AttackSpinning.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/AttackSpinning.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Basepose.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Basepose.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Block.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Block.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Cheer.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Cheer.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Climbing.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Climbing.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Dance.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Dance.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashBack.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashBack.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashFront.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashFront.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/DashRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Defeat.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Defeat.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/HeavyAttack.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/HeavyAttack.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Hop.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Hop.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Interact.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Interact.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Jump.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Jump.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/LayingDownIdle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/LayingDownIdle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/PickUp.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/PickUp.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Roll.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Roll.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Run.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Run.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shoot(1h).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shoot(1h).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shoot(2h).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shoot(2h).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shoot(2h)Bow.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shoot(2h)Bow.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shooting(1h).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shooting(1h).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shooting(2h).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Shooting(2h).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Throw.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Throw.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Walk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Walk.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Wave.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/fbx/Single Animations/Wave.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/gltf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/gltf/KayKit_AnimatedCharacter_v1.2.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Animations/gltf/KayKit_AnimatedCharacter_v1.2.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Godot - KayKit Animations Implementation Guide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Godot - KayKit Animations Implementation Guide.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Unity - KayKit Animations Implementation Guide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Unity - KayKit Animations Implementation Guide.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Unreal - KayKit Animations Implementation Guide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Unreal - KayKit Animations Implementation Guide.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Video Guide - YouTube.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Documentation/Video Guide - YouTube.url.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logoVariation_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logoVariation_black.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logoVariation_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logoVariation_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logoVariation_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logoVariation_white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo_black.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/KayKit Brand Resouces/KayKit_logo_white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/License.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae/Case.dae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae/Case.dae.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae/Pencil.dae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae/Pencil.dae.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae/PrototypePete.dae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/dae/PrototypePete.dae.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx/Case.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx/Case.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx/Pencil.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx/Pencil.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx/PrototypePete.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/fbx/PrototypePete.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf/Case.gltf.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf/Case.gltf.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf/Pencil.gltf.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf/Pencil.gltf.glb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf/PrototypePete.gltf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/gltf/PrototypePete.gltf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Case.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Case.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Case.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Case.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Pencil.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Pencil.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Pencil.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/Pencil.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armLeft.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armLeft.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armLeft.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armLeft.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armRight.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armRight.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armRight.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_armRight.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_body.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_body.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_body.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_body.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_head.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_head.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_head.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Models/obj/PrototypePete_head.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/More KayKit Assets.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/More KayKit Assets.url.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Patreon.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit Character Animations 1.2/Patreon.url.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatChoppedCooked.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatChoppedCooked.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/FoodCrate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/FoodCrate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Plate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Ingredient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/MyUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/MyUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Sink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Sink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InteractWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InteractWidget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +287,11 @@
       <workItem from="1716381003947" duration="3570000" />
       <workItem from="1716388341181" duration="2982000" />
       <workItem from="1716402743555" duration="242000" />
+      <workItem from="1716473102684" duration="3907000" />
+      <workItem from="1716532866049" duration="189000" />
+      <workItem from="1716533259185" duration="2573000" />
+      <workItem from="1716558952481" duration="599000" />
+      <workItem from="1716573801617" duration="1869000" />
     </task>
     <servers />
   </component>

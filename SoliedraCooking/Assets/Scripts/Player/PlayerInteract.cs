@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,8 +15,13 @@ public class PlayerInteract : MonoBehaviour
     private bool _canTakeDrop;
     
     private GameObject _objectPickedUp;
-    
-    
+    private Animator _animator;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
 
     public GameObject ObjectPickedUp => _objectPickedUp;
 
@@ -74,13 +80,17 @@ public class PlayerInteract : MonoBehaviour
         _objectPickedUp = objectPicked;
         _objectPickedUp.transform.parent = handPos;
         _objectPickedUp.transform.localPosition = Vector3.zero;
-        _objectPickedUp.transform.localRotation = Quaternion.identity;
+        _animator.SetBool("Carry", true);
+
+        //_objectPickedUp.transform.localRotation = Quaternion.identity;
     }
     
     public GameObject DropObject()
     {
         var dropObject = _objectPickedUp;
         _objectPickedUp = null;
+        _animator.SetBool("Carry", false);
+
         return dropObject;
     }
 
