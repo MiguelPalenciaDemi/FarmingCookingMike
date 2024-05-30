@@ -23,6 +23,7 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
 
     public virtual void TakeDrop(PlayerInteract player)
     {
+        
         // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
         if (player.ObjectPickedUp == null && _objectInWorktop) //Si no tenemos algo en la mano lo podemos coger
         {

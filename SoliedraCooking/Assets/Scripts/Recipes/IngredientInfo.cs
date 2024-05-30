@@ -45,7 +45,8 @@ public class IngredientInfo : ScriptableObject
 
     public FoodTag FoodTag => foodTag;
 
-    
+
+
     //Nos devuelve el nuevo IngredientInfo en el que se va a convertir
     public IngredientInfo CompleteAction(CookAction action)
     {

@@ -33,9 +33,9 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
             Debug.Log("Coger Objeto");
             amount--;
         }
-        else if(player.ObjectPickedUp)
+        else if(player.ObjectPickedUp && player.ObjectPickedUp.TryGetComponent(out Ingredient ingredient))
         {
-            var ingredient = player.ObjectPickedUp.GetComponent<Ingredient>();
+            //var ingredient = player.ObjectPickedUp.GetComponent<Ingredient>();
             
             if(ingredient.GetIngredientInfo() == ingredientInfo)//Check if we've got the same foodType in the hand and it's raw
             {

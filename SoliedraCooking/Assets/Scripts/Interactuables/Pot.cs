@@ -1,46 +1,105 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Pot : MonoBehaviour
 {
     [SerializeField] private float cookTime = 10f;
-    
+    [SerializeField] private Transform modelParent;
+    [SerializeField] private int maxRations = 4;
+    [SerializeField] private IngredientInfo waterIngredient;
+    [SerializeField] private GameObject waterModel;
+    [SerializeField] private Material normalWaterMaterial;
+    [SerializeField] private Material soupWaterMaterial;
+        
     private List<IngredientInfo> _ingredients;
     private bool _hasWater = false;
     private bool _isCooking = false;
-    
+
+    private float _rations;
     //Parte similar al ingrediente
     private IngredientState _ingredientState;
     private float _cookingTimer = 0; //Necesitamos un timer diferente, para que no se resetee, por eso cada vez que se inicie la corrutina tampoco lo ponemos a 0
     private Coroutine _cookingCoroutine;
     private Workstation _workstation;//Donde está siendo tratado
 
+    private MeshRenderer _waterMeshRenderer;
+    private void Awake()
+    {
+        _waterMeshRenderer = waterModel.GetComponent<MeshRenderer>();
+        _waterMeshRenderer.material = normalWaterMaterial;
+        _ingredients = new List<IngredientInfo>();
+        _rations = maxRations;
+        
+
+    }
+
     public bool AddIngredient(IngredientInfo ingredient)
     {
-        if (!_hasWater &&!CanAddIngredient(ingredient) && !_isCooking) return false;
+        //Si no tenemos agua o no es un ingrediente para POT pasamos
+        if (!_hasWater || !CanAddIngredient(ingredient)) return false;
+        //Si esta cocinando tampoco se puede añadir
+        if (_isCooking) return false;
         
         _ingredients.Add(ingredient);
+        UpdateModel();
+
         return true;
 
     }
 
+    private void UpdateModel()
+    {
+        var model = FoodManager.Instance.GetFoodModelPot(_ingredients);
+
+        if (model)
+            SetModel(model);
+    }
+
+    private void SetModel(GameObject model)
+    {
+        //primero limpiamos el estado actual
+        RemoveModel();
+        
+        //Instanciamos el nuevo
+        var newModel = Instantiate(model,modelParent);
+        
+        newModel.transform.localPosition = Vector3.zero;
+        newModel.transform.localRotation = Quaternion.identity;
+        
+    }
+    private void RemoveModel()
+    {
+        //Remove model
+        foreach (Transform model in modelParent)
+        {
+            Destroy(model.gameObject);
+        }
+    }
+    
     private bool CanAddIngredient(IngredientInfo ingredient)
     {
-        var tempIngredients = _ingredients;
+        var tempIngredients = new List<IngredientInfo>(_ingredients);
         tempIngredients.Add(ingredient);
         
         return FoodManager.Instance.CheckPotIngredients(tempIngredients);
     }
 
-    public void AddWater()
+    public void SetWater(bool value)
     {
-        _hasWater = true;
+        waterModel.SetActive(value);
+        _hasWater = value;
+
+        if (true)
+            AddIngredient(waterIngredient);
+
     }
 
     public bool CanCook()
     {
-        return _hasWater && FoodManager.Instance.CheckPotIngredients(_ingredients);
+        return _hasWater && FoodManager.Instance.CheckPotRecipe(_ingredients);
     }
 
     public void Cook(Workstation workstation, float modifier)
@@ -82,6 +141,7 @@ public class Pot : MonoBehaviour
                 if (_cookingTimer > cookTime)
                 {
                     _ingredientState = IngredientState.Cooked;
+                    _waterMeshRenderer.material = soupWaterMaterial;
                     //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE- SE TRASLADA AL ABRIR EL HORNO
                     _cookingTimer = 0;
                     //Do VFX things
@@ -123,5 +183,29 @@ public class Pot : MonoBehaviour
     public float GetOvercookedProgress()
     {
         return _cookingTimer / (cookTime * 0.5f);
+    }
+
+    
+    public void DishUp(Plate plate)
+    {
+        if (_rations > 0 && _ingredientState == IngredientState.Cooked && plate.Fill(_ingredients))
+        {
+            _rations--;
+
+            if (_rations <= 0)
+            {
+                ResetPot();
+            }
+            
+        }
+    }
+
+    private void ResetPot()
+    {
+        SetWater(false);
+        RemoveModel();
+        _rations = maxRations;
+        _ingredientState = IngredientState.Raw;
+        
     }
 }

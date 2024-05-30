@@ -21,7 +21,7 @@ public class PlateTower : MonoBehaviour, ITakeDrop
         }
         else if(player.ObjectPickedUp)
         {
-            if(player.ObjectPickedUp.GetComponent<Plate>())//Comprobamos que tengamos un plato en la mano
+            if(player.ObjectPickedUp.GetComponent<Plate>() || player.ObjectPickedUp.GetComponent<Pot>())//Comprobamos que tengamos un plato o una olla en la mano
             {
                 Destroy(player.DropObject());
             }

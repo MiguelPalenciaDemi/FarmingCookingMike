@@ -9,6 +9,7 @@ public class FoodManager : MonoBehaviour
     public static FoodManager Instance => _instance;
 
     [SerializeField] private ListOfFoodModels models;
+    [SerializeField] private ListOfFoodModels modelsPot;
     [SerializeField] private RecipeBook potRecipes;
     [SerializeField] private RecipeBook plateRecipes;
     private void Awake()
@@ -24,6 +25,10 @@ public class FoodManager : MonoBehaviour
     {
         return potRecipes.ValidIngredients(ingredients);
     }
+    public bool CheckPotRecipe(List<IngredientInfo> ingredients)
+    {
+        return potRecipes.SearchMatchRecipe(ingredients);
+    }
     
     //Comprueba si corresponde con el proceso de alguna receta de olla
     public bool CheckPlateIngredients(List<IngredientInfo> ingredients)
@@ -34,6 +39,11 @@ public class FoodManager : MonoBehaviour
     public GameObject GetFoodModel(List<IngredientInfo> ingredients)
     {
         return models.GetModel(ingredients);
+    }
+    
+    public GameObject GetFoodModelPot(List<IngredientInfo> ingredients)
+    {
+        return modelsPot.GetModel(ingredients);
     }
 
 }

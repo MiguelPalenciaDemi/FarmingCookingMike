@@ -12,7 +12,7 @@ public class Sink : Workstation
        if(_objectInWorktop.TryGetComponent(out Plate plate))
            plate.Clean();
        else if(_objectInWorktop.TryGetComponent(out Pot pot))
-           pot.AddWater();
+           pot.SetWater(true);
 
 
    }

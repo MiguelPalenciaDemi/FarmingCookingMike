@@ -19,14 +19,18 @@ public class Stove : Workstation
         {
             if(!_objectInWorktop) return; //If there isn't any obj to interact we exit
             
-            //First get the ingredient   
-            //_objectInWorktop.TryGetComponent(out Ingredient ingredient);
-            if (!_objectInWorktop.TryGetComponent(out Ingredient ingredient))
+            
+            //Comprueba si es ingrediente   
+            
+            if (_objectInWorktop.TryGetComponent(out Ingredient ingredient))
             {
-                if (!ingredient.CanDoAction(CookAction.Cook)) return;
+                //Si no se puede cocinar y esta apagado no hace nada
+                //Si no se puede cocinar pero esta encendido significa que se esta quemando
+                if (!ingredient.CanDoAction(CookAction.Cook) && !isOn) return;
               
                 if (!isOn)
                 {
+                    Debug.Log("A cocinar");
                     TurnOn(ingredient);
                 }
                 else
@@ -36,9 +40,16 @@ public class Stove : Workstation
             }
             else if (_objectInWorktop.TryGetComponent(out Pot pot))
             {
-                if (pot.CanCook())
+                //if (!ingredient.CanDoAction(CookAction.Cook) && !isOn) return;
+
+                if (pot.CanCook() && !isOn)
                 {
-                    pot.Cook(this,speedCooking);
+                    TurnOn(pot);
+                    
+                }
+                else
+                {
+                    TurnOff(pot);
                 }
             }
             
@@ -56,7 +67,7 @@ public class Stove : Workstation
         private void TurnOn(Ingredient ingredient)
         {
             ingredient.Cook(this,speedCooking);
-            _animator.SetBool(IsOpenAnim, false);
+            //_animator.SetBool(IsOpenAnim, false);
             isOn = true;        
             
             ShowProgressUI(true,CookAction.Cook);
@@ -77,8 +88,9 @@ public class Stove : Workstation
     
         private void TurnOff(Ingredient ingredient)
         {
+            Debug.Log("Paramos el cocinado");
             ingredient.StopCook();
-            _animator.SetBool(IsOpenAnim, true);
+            //_animator.SetBool(IsOpenAnim, true);
             isOn = false;      
             
             ShowProgressUI(false);
@@ -88,7 +100,7 @@ public class Stove : Workstation
         private void TurnOff(Pot pot)
         {
             pot.StopCook();
-            _animator.SetBool(IsOpenAnim, true);
+            //_animator.SetBool(IsOpenAnim, true);
             isOn = false;      
             
             ShowProgressUI(false);
@@ -97,7 +109,7 @@ public class Stove : Workstation
     
         public override void TakeDrop(PlayerInteract player)
         {
-            if(isOn)
+            if(!isOn)
                 base.TakeDrop(player);
         }
 }

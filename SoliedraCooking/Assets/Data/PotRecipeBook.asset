@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0304c7d904da441b26ad4321d49e19, type: 3}
   m_Name: PotRecipeBook
   m_EditorClassIdentifier: 
-  recipes: []
+  recipes:
+  - {fileID: 11400000, guid: 4593677f901052d4b9cfc46d16f65abc, type: 2}

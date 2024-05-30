@@ -22,7 +22,7 @@ public class Oven : Workstation
         //First get the ingredient   
         _objectInWorktop.TryGetComponent(out Ingredient ingredient);
         if (!ingredient) return;
-        if (!ingredient.CanDoAction(CookAction.Cook)) return;
+        if (!ingredient.CanDoAction(CookAction.Cook) && isOpen) return;
       
         if (isOpen)
         {

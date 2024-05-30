@@ -11,6 +11,7 @@ public class Ingredient : MonoBehaviour
    private IngredientState _ingredientState;
    private float _chopTimer;
    private float _cookingTimer = 0; //Necesitamos un timer diferente, para que no se resetee, por eso cada vez que se inicie la corrutina tampoco lo ponemos a 0
+   private float _overcookTime = 0;
    private Coroutine _cookingCoroutine;
    private Workstation _workstation;//Donde está siendo tratado
 
@@ -79,7 +80,6 @@ public class Ingredient : MonoBehaviour
 
    public void Cook(Workstation workstation,float modifier = 1)
    {
-      Debug.Log("Estoy en Cook");
       _workstation = workstation;
       _cookingCoroutine = StartCoroutine(Cooking(modifier));
       
@@ -88,16 +88,17 @@ public class Ingredient : MonoBehaviour
    public void StopCook()
    {
       if (_cookingCoroutine == null) return;
+      
       StopCoroutine(_cookingCoroutine);
-      
-      //Si está cocinado o "quemado" cambiaremos el modelo
-      if(_ingredientState == IngredientState.Cooked) 
-         UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
-      else if(_ingredientState == IngredientState.Overcooked)
-         UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook),true);
-      
       _cookingCoroutine = null;
       _workstation = null;
+      
+      // //Si está cocinado o "quemado" cambiaremos el modelo
+      // if(_ingredientState == IngredientState.Cooked) 
+      //    UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
+      // else if(_ingredientState == IngredientState.Overcooked)
+      //    UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook),true);
+      //
 
    }
 
@@ -111,7 +112,7 @@ public class Ingredient : MonoBehaviour
 
          while(_ingredientState != IngredientState.Cooked)//Proceso para que se cocine la comida
          {
-            Debug.Log("Cooking: " +_cookingTimer);
+            
             _cookingTimer += Time.deltaTime * modifier;
             
             //Actualizamos la UI
@@ -119,6 +120,7 @@ public class Ingredient : MonoBehaviour
 
             if (_cookingTimer > cookTime)
             {
+               UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
                _ingredientState = IngredientState.Cooked;
                //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE- SE TRASLADA AL ABRIR EL HORNO
                _cookingTimer = 0;
@@ -131,7 +133,7 @@ public class Ingredient : MonoBehaviour
          _workstation.Warning(true);
          while(_ingredientState == IngredientState.Cooked)//Proceso para que se queme la comida
          {
-            Debug.Log("OverCooking: " +_cookingTimer);
+            
             _cookingTimer += Time.deltaTime;
             
             //Actualizamos la UI
@@ -139,8 +141,9 @@ public class Ingredient : MonoBehaviour
 
             if (_cookingTimer > cookTime * 0.5f)
             {
+               UpdateModel(ingredientInfo,true);
                _ingredientState = IngredientState.Overcooked;
-               //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE- SE TRASLADA AL ABRIR EL HORNO
+               
                _workstation.ForceStopInteract();
                //Do VFX things
             }
@@ -164,6 +167,8 @@ public class Ingredient : MonoBehaviour
       newModel.transform.localPosition = Vector3.zero;
       newModel.transform.localRotation = Quaternion.identity;
 
+      _overcookTime = ingredientInfo.GetTime(CookAction.Cook) * 0.5f;//Antes de cambiar el ingrediente calculamos su tiempo para quemarse, sino perderemos esa info
+      
       ingredientInfo = ingredient;
       _ingredientState = IngredientState.Raw;
    }
@@ -212,7 +217,7 @@ public class Ingredient : MonoBehaviour
    
    public float GetOvercookedProgress()
    {
-      return _cookingTimer /(ingredientInfo.GetTime(CookAction.Cook)*0.5f);
+      return _cookingTimer /_overcookTime;
    }
 
    public void CleanWorkstation()

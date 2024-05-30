@@ -39,34 +39,77 @@ public class Worktop : Workstation
    {
       if (_objectInWorktop && player.ObjectPickedUp)
       {
-         _objectInWorktop.TryGetComponent(out Plate plate);
+         
          
          //Is a Plate and we have an ingredient in our hand?
-         if (plate)
+         if (_objectInWorktop.TryGetComponent(out Plate plate))
          {
-            player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient);
-            if (!playerIngredient) return;
-            if(plate.AddIngredient(playerIngredient.GetIngredientInfo()))
-               Destroy(player.DropObject());
+            //Ingrediente
+            if (player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient))
+            {
+               if(plate.AddIngredient(playerIngredient.GetIngredientInfo()))
+                  Destroy(player.DropObject());
+            }
+            //POT
+            else if (player.ObjectPickedUp.TryGetComponent(out Pot potPicked))
+            {
+               potPicked.DishUp(plate);
+            }
+            
 
             return;
          }
+         
+         
+         
+         //Is a Pot and we have an ingredient or plate in our hand?
+         if (_objectInWorktop.TryGetComponent(out Pot pot))
+         {
+            
+            if (player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient))
+            {
+               if(pot.AddIngredient(playerIngredient.GetIngredientInfo()))
+                  Destroy(player.DropObject());
+            }
+            //POT
+            else if (player.ObjectPickedUp.TryGetComponent(out plate))
+            {               
+               pot.DishUp(plate);
+            }
+            return;
+         }
+
          
          //Ingrediente en la encimera - Plato en la mano -> juntamos ingredientes y ponemos plato.
          _objectInWorktop.TryGetComponent(out Ingredient ingredient);
          if (ingredient)
          {
-            player.ObjectPickedUp.TryGetComponent(out plate);
-            if (!plate) return;
-            
-            if (plate.AddIngredient(ingredient.GetIngredientInfo()))
+            //Plato
+            if (player.ObjectPickedUp.TryGetComponent(out plate))
             {
-               Destroy(ingredient.gameObject);
-               DropObject(player);
-               ShowInteractUI(false);
-            }
+               if (plate.AddIngredient(ingredient.GetIngredientInfo()))
+               {
+                  Destroy(ingredient.gameObject);
+                  DropObject(player);
+                  ShowInteractUI(false);
+               }
 
-            return;
+               return;
+               
+            }
+            //Pot
+            if (player.ObjectPickedUp.TryGetComponent(out pot))
+            {
+               if (pot.AddIngredient(ingredient.GetIngredientInfo()))
+               {
+                  Destroy(ingredient.gameObject);
+                  DropObject(player);
+                  ShowInteractUI(false);
+               }
+
+               return;
+            }
+            
          }
       }
      
