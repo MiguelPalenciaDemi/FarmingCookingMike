@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class OrderManager : MonoBehaviour
 {
     private static OrderManager instance;
     public static OrderManager Instance => instance;
-    
+    [SerializeField] private int minTimeBetweenOrders = 8;
+    [SerializeField] private int maxTimeBetweenOrders = 16;
+    [SerializeField] private int maxOrders = 4;
     [SerializeField] private RecipeBook currentRecipeBook;
     [SerializeField] private List<OrderStruct> orders;
     [SerializeField] private GameObject orderUIPrefab;
@@ -23,6 +26,7 @@ public class OrderManager : MonoBehaviour
     private void Start()
     {
         orders = new List<OrderStruct>();
+        ManageOrder();
     }
 
     public void GenerateNewOrder()
@@ -33,6 +37,18 @@ public class OrderManager : MonoBehaviour
         orders.Add(newOrder);
     }
 
+    private void ManageOrder()
+    {
+        if (orders.Count<maxOrders)
+        {
+            GenerateNewOrder();
+            Invoke(nameof(ManageOrder),Random.Range(minTimeBetweenOrders,maxTimeBetweenOrders));
+        }
+        else
+            Invoke(nameof(ManageOrder),2);
+
+    }
+
     public bool DeliverOrder(Plate plate)
     {
         var orderIndex = orders.FindIndex(x => x.Order.Recipe.ComparePlate(plate.Ingredients) && !x.IsComplete());//Que coincida y no esté entregada
@@ -41,9 +57,26 @@ public class OrderManager : MonoBehaviour
         orders[orderIndex].Complete();
         return true;
     }
+    
+    public void FailOrder(OrderUI orderUI)
+    {
+        var index =orders.FindIndex(x => x.UI == orderUI);
+        if(index!=-1)
+            orders.RemoveAt(index);
+        
+    }
+
+    private void CalculateScore(List<IngredientInfo> ingredients)
+    {
+        var score = 0f;
+        foreach (var item in ingredients)
+        {
+            score += item.Price;
+        }
+    }
 }
 
-
+[Serializable]
 struct OrderStruct
 {
     private Order _order;
@@ -57,7 +90,7 @@ struct OrderStruct
         _order = order;
         _orderUI = orderUI;
         
-        _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name);
+        _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name, _order.Recipe.TimeToPrepare);
     }
 
     public void Complete()
@@ -70,4 +103,6 @@ struct OrderStruct
     {
         return _order.IsDone;
     }
+
+   
 }

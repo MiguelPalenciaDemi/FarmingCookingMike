@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8540e5a30d59ec54d86b1a526563f5f4, type: 2}
   - {fileID: 11400000, guid: d596a31a3b0febc4390d5c907e3148ce, type: 2}
   recipeImage: {fileID: 21300000, guid: b9032b7fd2d28214b8b77cdcc61e5e6d, type: 3}
+  timeToPrepare: 80

@@ -703,15 +703,15 @@ ModelImporter:
       name: Cheer
       takeName: Cheer
       internalID: 7769419075285740307
-      firstFrame: 0
-      lastFrame: 50
+      firstFrame: 5
+      lastFrame: 23
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

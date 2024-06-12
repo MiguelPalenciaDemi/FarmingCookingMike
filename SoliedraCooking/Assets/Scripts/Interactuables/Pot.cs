@@ -206,6 +206,10 @@ public class Pot : MonoBehaviour
         RemoveModel();
         _rations = maxRations;
         _ingredientState = IngredientState.Raw;
+        _ingredients.Clear();
+        _waterMeshRenderer.material = normalWaterMaterial;
+
+        
         
     }
 }

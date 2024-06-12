@@ -14,14 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodTag: 5
   model: {fileID: 919132149155446097, guid: 165e1365f007fb1499156816789ca6e2, type: 3}
-  ingredientModels:
-    rawModel: {fileID: 0}
-    mediumRare: {fileID: 0}
-    cooked: {fileID: 0}
-    overcooked: {fileID: 0}
-    chopped: {fileID: 0}
-    smashed: {fileID: 0}
+  spoiledModel: {fileID: 0}
+  price: 0
   actions:
   - _action: 1
     _ingredientResult: {fileID: 11400000, guid: 1f0c2e9ae2eb64f44ad0c628ce56e27c, type: 2}
-    _time: 1
+    _time: 6

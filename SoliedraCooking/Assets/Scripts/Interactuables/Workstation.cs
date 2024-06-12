@@ -25,14 +25,14 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
     {
         
         // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
-        if (player.ObjectPickedUp == null && _objectInWorktop) //Si no tenemos algo en la mano lo podemos coger
+        if (CanTake(player)) //Si no tenemos algo en la mano lo podemos coger
         {
             player.TakeObject(_objectInWorktop);
             _objectInWorktop = null;
             ShowProgressUI(false);
             ShowInteractUI(false);
         }
-        else if(player.ObjectPickedUp && !_objectInWorktop)
+        else if(CanDrop(player))
         {
             DropObject(player);
             ShowInteractUI(true, _objectInWorktop);
@@ -40,6 +40,15 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
        
     }
 
+    public bool CanTake(PlayerInteract player)
+    {
+        return player.ObjectPickedUp == null && _objectInWorktop;
+    }
+
+    public bool CanDrop(PlayerInteract player)
+    {
+        return player.ObjectPickedUp && !_objectInWorktop;
+    }
     protected void DropObject(PlayerInteract player)
     {
         _objectInWorktop =  player.DropObject();

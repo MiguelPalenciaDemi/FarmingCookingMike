@@ -15,3 +15,4 @@ MonoBehaviour:
   ingredients:
   - {fileID: 11400000, guid: d596a31a3b0febc4390d5c907e3148ce, type: 2}
   recipeImage: {fileID: 21300000, guid: 039cfc4fe1969b74b95ea30249440cf2, type: 3}
+  timeToPrepare: 30

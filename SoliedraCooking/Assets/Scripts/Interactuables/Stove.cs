@@ -67,7 +67,7 @@ public class Stove : Workstation
         private void TurnOn(Ingredient ingredient)
         {
             ingredient.Cook(this,speedCooking);
-            //_animator.SetBool(IsOpenAnim, false);
+            _animator.SetTrigger("Cook");
             isOn = true;        
             
             ShowProgressUI(true,CookAction.Cook);
@@ -90,7 +90,7 @@ public class Stove : Workstation
         {
             Debug.Log("Paramos el cocinado");
             ingredient.StopCook();
-            //_animator.SetBool(IsOpenAnim, true);
+            _animator.SetTrigger("Stop");
             isOn = false;      
             
             ShowProgressUI(false);
@@ -109,7 +109,14 @@ public class Stove : Workstation
     
         public override void TakeDrop(PlayerInteract player)
         {
-            if(!isOn)
+            if (!isOn)
+            {
+                if(CanTake(player) && _objectInWorktop.GetComponent<Ingredient>())
+                    _animator.SetTrigger("Take");
+                else if(CanDrop(player) && player.ObjectPickedUp.GetComponent<Ingredient>())
+                    _animator.SetTrigger("Drop");
+
                 base.TakeDrop(player);
+            }
         }
 }

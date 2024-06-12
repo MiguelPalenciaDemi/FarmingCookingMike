@@ -573,7 +573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -972.9
+      value: -964.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPosition: {fileID: 2329804174783638013}
-  speedCooking: 20
+  speedCooking: 1
   widgetUI: {fileID: 2179355014830033298}
   interactUI: {fileID: 6467513083558882522}
 --- !u!65 &3412624840414448107

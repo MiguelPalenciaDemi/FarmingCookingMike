@@ -51,7 +51,7 @@ MonoBehaviour:
     model: {fileID: 7260185349473747789, guid: bbaad230417397544ba6efbb9d46e053, type: 3}
   - _ingredients:
     - {fileID: 11400000, guid: f94184c36021ac6428d0e600dfa3a3f9, type: 2}
-    model: {fileID: 919132149155446097, guid: 55e25eb963e077341a596ac3b1d48034, type: 3}
+    model: {fileID: 6987890739778366562, guid: a46c8a0d537dc274bac848091fec0be8, type: 3}
   - _ingredients:
     - {fileID: 11400000, guid: b992a3cfc95f84247b36e3f9e285d83c, type: 2}
     - {fileID: 11400000, guid: db4eef4feffed7040aec24904a3c54d8, type: 2}

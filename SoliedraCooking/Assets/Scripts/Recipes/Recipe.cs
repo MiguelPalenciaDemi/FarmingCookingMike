@@ -8,9 +8,11 @@ public class Recipe : ScriptableObject
 {
     [SerializeField] private List<IngredientInfo> ingredients;
     [SerializeField] private Sprite recipeImage;
+    [SerializeField] private float timeToPrepare;
+    
     public List<IngredientInfo> Ingredients => ingredients;
-
     public Sprite RecipeImage => recipeImage;
+    public float TimeToPrepare => timeToPrepare;
 
     //Compromabos si la receta está realizada correctamente.
     public bool ComparePlate(List<IngredientInfo> plateIngredients)

@@ -30,7 +30,7 @@ public class Ingredient : MonoBehaviour
 
       if (_chopTimer < ingredientInfo.GetTime(CookAction.Chop))
       {
-         _chopTimer += Time.deltaTime * modifier;
+         _chopTimer += 1 * modifier;
          Debug.Log("Chopping: "+_chopTimer);
          //Update UI
          station.ShowProgressUI(true, CookAction.Chop);
@@ -58,7 +58,7 @@ public class Ingredient : MonoBehaviour
       
       if (_chopTimer < ingredientInfo.GetTime(CookAction.Smash))
       {
-         _chopTimer += Time.deltaTime * modifier;
+         _chopTimer += 1 * modifier;
          Debug.Log("Smashing: "+_chopTimer);
          
          station.ShowProgressUI(true, CookAction.Smash);
