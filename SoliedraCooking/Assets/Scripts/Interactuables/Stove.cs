@@ -111,12 +111,23 @@ public class Stove : Workstation
         {
             if (!isOn)
             {
-                if(CanTake(player) && _objectInWorktop.GetComponent<Ingredient>())
+                base.TakeDrop(player);
+                
+                if(CanPanDisappear(player))
                     _animator.SetTrigger("Take");
-                else if(CanDrop(player) && player.ObjectPickedUp.GetComponent<Ingredient>())
+                else if(CanPanAppear(player))
                     _animator.SetTrigger("Drop");
 
-                base.TakeDrop(player);
             }
+        }
+
+        private bool CanPanAppear(PlayerInteract player)
+        {
+            return _objectInWorktop && _objectInWorktop.GetComponent<Ingredient>();
+        }
+
+        private bool CanPanDisappear(PlayerInteract player)
+        {
+            return (player.ObjectPickedUp && player.ObjectPickedUp.GetComponent<Ingredient>()) || (_objectInWorktop &&_objectInWorktop.GetComponent<Plate>());
         }
 }

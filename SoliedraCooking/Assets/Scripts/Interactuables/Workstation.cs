@@ -23,6 +23,7 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
 
     public virtual void TakeDrop(PlayerInteract player)
     {
+        if (TryAddIngredient(player)) return;   //Hemos podido añadir ingrediente o emplatar.
         
         // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
         if (CanTake(player)) //Si no tenemos algo en la mano lo podemos coger
@@ -37,7 +38,87 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
             DropObject(player);
             ShowInteractUI(true, _objectInWorktop);
         }
-       
+
+    }
+
+    private bool TryAddIngredient(PlayerInteract player)
+    {
+        if (_objectInWorktop && player.ObjectPickedUp)
+        {
+             
+             
+            //Is a Plate and we have an ingredient in our hand?
+            if (_objectInWorktop.TryGetComponent(out Plate plate))
+            {
+                //Ingrediente
+                if (player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient))
+                {
+                    if(plate.AddIngredient(playerIngredient.GetIngredientInfo()))
+                        Destroy(player.DropObject());
+                }
+                //POT
+                else if (player.ObjectPickedUp.TryGetComponent(out Pot potPicked))
+                {
+                    potPicked.DishUp(plate);
+                }
+
+
+                return true;
+            }
+             
+             
+             
+            //Is a Pot and we have an ingredient or plate in our hand?
+            if (_objectInWorktop.TryGetComponent(out Pot pot))
+            {
+                if (player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient))
+                {
+                    if(pot.AddIngredient(playerIngredient.GetIngredientInfo()))
+                        Destroy(player.DropObject());
+                }
+                //POT
+                else if (player.ObjectPickedUp.TryGetComponent(out plate))
+                {               
+                    pot.DishUp(plate);
+                }
+
+                return true;
+            }
+
+             
+            //Ingrediente en la encimera - Plato en la mano -> juntamos ingredientes y ponemos plato.
+            _objectInWorktop.TryGetComponent(out Ingredient ingredient);
+            if (ingredient)
+            {
+                //Plato
+                if (player.ObjectPickedUp.TryGetComponent(out plate))
+                {
+                    if (plate.AddIngredient(ingredient.GetIngredientInfo()))
+                    {
+                        Destroy(ingredient.gameObject);
+                        DropObject(player);
+                        ShowInteractUI(false);
+                    }
+
+                    return true;
+                }
+                //Pot
+                if (player.ObjectPickedUp.TryGetComponent(out pot))
+                {
+                    if (pot.AddIngredient(ingredient.GetIngredientInfo()))
+                    {
+                        Destroy(ingredient.gameObject);
+                        DropObject(player);
+                        ShowInteractUI(false);
+                    }
+
+                    return true;
+                }
+                
+            }
+        }
+
+        return false;
     }
 
     public bool CanTake(PlayerInteract player)

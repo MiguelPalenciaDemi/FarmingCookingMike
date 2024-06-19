@@ -6,18 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/IdleActive.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/IdleActive.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/IdleDeactive.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/IdleDeactive.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/PanDropCook.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/PanDropCook.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/Stove.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/Stove.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Stove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Stove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +152,8 @@
       <workItem from="1717079336766" duration="4667000" />
       <workItem from="1717152591716" duration="1726000" />
       <workItem from="1717395808671" duration="7982000" />
+      <workItem from="1718783470075" duration="652000" />
+      <workItem from="1718784244329" duration="3228000" />
     </task>
     <servers />
   </component>
