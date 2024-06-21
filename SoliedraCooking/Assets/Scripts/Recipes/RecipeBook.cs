@@ -9,6 +9,8 @@ public class RecipeBook : ScriptableObject
 {
     [SerializeField] private List<Recipe> recipes;
 
+    public List<Recipe> Recipes => recipes;
+
     public Recipe GetRandomRecipe()
     {
         var randomIndex = Random.Range(0, recipes.Count);

@@ -46,7 +46,7 @@ public class IngredientInfo : ScriptableObject
 
     public FoodTag FoodTag => foodTag;
 
-    public float Price => _isSpoiled? price*0.5f : price;
+    public float Price => _isSpoiled? price*0.25f : price;
 
 
     //Nos devuelve el nuevo IngredientInfo en el que se va a convertir

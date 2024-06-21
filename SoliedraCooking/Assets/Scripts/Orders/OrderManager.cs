@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +9,9 @@ public class OrderManager : MonoBehaviour
 {
     private static OrderManager instance;
     public static OrderManager Instance => instance;
+    [SerializeField] private float money;
+    [SerializeField] private TextMeshProUGUI moneyText;
+    
     [SerializeField] private int minTimeBetweenOrders = 8;
     [SerializeField] private int maxTimeBetweenOrders = 16;
     [SerializeField] private int maxOrders = 4;
@@ -27,6 +31,7 @@ public class OrderManager : MonoBehaviour
     {
         orders = new List<OrderStruct>();
         ManageOrder();
+        UpdateMoneyUI();
     }
 
     public void GenerateNewOrder()
@@ -55,6 +60,8 @@ public class OrderManager : MonoBehaviour
         if(orderIndex == -1) return false;
         
         orders[orderIndex].Complete();
+        money += CalculateScore(plate.Ingredients);
+        UpdateMoneyUI();
         return true;
     }
     
@@ -66,14 +73,23 @@ public class OrderManager : MonoBehaviour
         
     }
 
-    private void CalculateScore(List<IngredientInfo> ingredients)
+    private float CalculateScore(List<IngredientInfo> ingredients)
     {
         var score = 0f;
         foreach (var item in ingredients)
         {
             score += item.Price;
         }
+
+        return score;
     }
+
+    private void UpdateMoneyUI()
+    {
+        moneyText.text = money.ToString();
+    }
+
+    public RecipeBook GetCurrentRecipeBook() => currentRecipeBook;
 }
 
 [Serializable]

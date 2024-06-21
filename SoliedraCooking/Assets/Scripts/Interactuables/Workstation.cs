@@ -73,8 +73,11 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
             {
                 if (player.ObjectPickedUp.TryGetComponent(out Ingredient playerIngredient))
                 {
-                    if(pot.AddIngredient(playerIngredient.GetIngredientInfo()))
+                    if (pot.AddIngredient(playerIngredient.GetIngredientInfo()))
+                    {
+                        ShowInteractUI(true, _objectInWorktop);
                         Destroy(player.DropObject());
+                    }
                 }
                 //POT
                 else if (player.ObjectPickedUp.TryGetComponent(out plate))
@@ -109,7 +112,7 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
                     {
                         Destroy(ingredient.gameObject);
                         DropObject(player);
-                        ShowInteractUI(false);
+                        ShowInteractUI(true, _objectInWorktop);
                     }
 
                     return true;

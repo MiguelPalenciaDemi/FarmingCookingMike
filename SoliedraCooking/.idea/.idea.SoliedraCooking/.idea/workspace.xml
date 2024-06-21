@@ -6,13 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/IdleActive.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/IdleActive.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/IdleDeactive.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/IdleDeactive.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/PanDropCook.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/PanDropCook.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Stove/Stove.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Stove/Stove.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Stove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Stove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/BreadDone.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/BreadDone.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatCooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/MushroomChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/MushroomChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/PotatoeChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/PotatoeChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/LettuceChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/LettuceChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/TomatoChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/TomatoChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChoppedCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChoppedCooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakCooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Water.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orders/OrderUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/RecipeTileUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodModels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -154,6 +166,8 @@
       <workItem from="1717395808671" duration="7982000" />
       <workItem from="1718783470075" duration="652000" />
       <workItem from="1718784244329" duration="3228000" />
+      <workItem from="1718874654035" duration="6686000" />
+      <workItem from="1718957600297" duration="2536000" />
     </task>
     <servers />
   </component>

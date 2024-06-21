@@ -15,4 +15,5 @@ MonoBehaviour:
   foodTag: 0
   model: {fileID: 919132149155446097, guid: cfd315b109591ce4ebbf92027dc5b77e, type: 3}
   spoiledModel: {fileID: 0}
+  price: 1
   actions: []

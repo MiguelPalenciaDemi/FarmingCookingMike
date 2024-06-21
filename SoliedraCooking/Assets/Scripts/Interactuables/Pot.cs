@@ -45,6 +45,9 @@ public class Pot : MonoBehaviour
         
         _ingredients.Add(ingredient);
         UpdateModel();
+        
+        // if(_workstation)
+        //     _workstation.ShowInteractUI(true,gameObject);
 
         return true;
 
