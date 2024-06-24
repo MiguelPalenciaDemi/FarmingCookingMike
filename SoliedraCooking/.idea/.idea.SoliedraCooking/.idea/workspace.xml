@@ -7,22 +7,42 @@
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/BreadDone.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/BreadDone.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/BreadRaw.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/BreadRaw.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/Flour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/Flour.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/FlourSmashed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Bread/FlourSmashed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Meat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Meat.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatChopped.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/MeatCooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Mushroom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Mushroom.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/MushroomChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/MushroomChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Potatoe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Potatoe.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/PotatoeChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/PotatoeChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/Lettuce.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/Lettuce.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/LettuceChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/LettuceChopped.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionRaw.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionRaw.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/Tomato.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/Tomato.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/TomatoChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/TomatoChopped.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChopped.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChoppedCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChoppedCooked.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakCooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakRaw.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakRaw.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Water.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Bread.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Bread.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/BreadMeat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/BreadMeat.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Ham Cooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Ham Cooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/MushPotatoSoup.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/MushPotatoSoup.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Steak.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Steak.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Torrezno.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Torrezno.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewInputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewInputSystem/PlayerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/RecipeItemUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/RecipeItemUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Pot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/IngredientInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Recipe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/RecipeTitleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RecipeTitleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/RecipebookUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RecipebookUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orders/OrderUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/RecipeTileUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/RecipeInfoUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodModels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -168,6 +188,8 @@
       <workItem from="1718784244329" duration="3228000" />
       <workItem from="1718874654035" duration="6686000" />
       <workItem from="1718957600297" duration="2536000" />
+      <workItem from="1719224193528" duration="3328000" />
+      <workItem from="1719234233431" duration="3972000" />
     </task>
     <servers />
   </component>

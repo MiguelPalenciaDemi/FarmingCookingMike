@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 70213f72b5a76934fa450b22e5990545, type: 2}
   recipeImage: {fileID: 0}
   timeToPrepare: 30
+  description: '- Cook the steak raw on the stove.'

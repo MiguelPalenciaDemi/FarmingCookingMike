@@ -17,3 +17,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d596a31a3b0febc4390d5c907e3148ce, type: 2}
   recipeImage: {fileID: 21300000, guid: b9032b7fd2d28214b8b77cdcc61e5e6d, type: 3}
   timeToPrepare: 80
+  description: '- Chop the meat.
+
+    - Cook it in the stove.
+
+    - Knead the flour
+    into a loaf shape.
+
+    - Bake it in the oven.'

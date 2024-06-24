@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 [CreateAssetMenu(fileName = "newRecipe",menuName = "Recipe")]
@@ -9,10 +10,12 @@ public class Recipe : ScriptableObject
     [SerializeField] private List<IngredientInfo> ingredients;
     [SerializeField] private Sprite recipeImage;
     [SerializeField] private float timeToPrepare;
-    
+    [SerializeField, TextAreaAttribute] private string description;
     public List<IngredientInfo> Ingredients => ingredients;
     public Sprite RecipeImage => recipeImage;
     public float TimeToPrepare => timeToPrepare;
+
+    public string Description => description.ToString();
 
     //Compromabos si la receta está realizada correctamente.
     public bool ComparePlate(List<IngredientInfo> plateIngredients)

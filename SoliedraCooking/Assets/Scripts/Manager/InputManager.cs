@@ -31,4 +31,9 @@ public class InputManager : MonoBehaviour
     {
         _playerInteract.TakeDropInput();
     }
+
+    public void OnShowRecipeBook()
+    {
+        RecipebookUI.Instance.ShowRecipeBook();
+    }
 }

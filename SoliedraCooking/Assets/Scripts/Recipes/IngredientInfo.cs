@@ -33,6 +33,7 @@ public class IngredientInfo : ScriptableObject
     [SerializeField] private GameObject model;
     [SerializeField] private GameObject spoiledModel;
     [SerializeField] private float price;
+    [SerializeField] private Sprite icon;
     private bool _isSpoiled = false; 
     
     
@@ -47,6 +48,8 @@ public class IngredientInfo : ScriptableObject
     public FoodTag FoodTag => foodTag;
 
     public float Price => _isSpoiled? price*0.25f : price;
+
+    public Sprite Icon => icon;
 
 
     //Nos devuelve el nuevo IngredientInfo en el que se va a convertir

@@ -16,4 +16,5 @@ MonoBehaviour:
   model: {fileID: 8166999676565534711, guid: b732deaa7e3d6d64f858983c4c2587e5, type: 3}
   spoiledModel: {fileID: 0}
   price: 2
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   actions: []
