@@ -8,6 +8,7 @@ public class FoodManager : MonoBehaviour
     private static FoodManager _instance;
     public static FoodManager Instance => _instance;
 
+    [SerializeField] private ListOfFoodIcons foodIcons;
     [SerializeField] private ListOfFoodModels models;
     [SerializeField] private ListOfFoodModels modelsPot;
     [SerializeField] private RecipeBook potRecipes;
@@ -44,6 +45,12 @@ public class FoodManager : MonoBehaviour
     public GameObject GetFoodModelPot(List<IngredientInfo> ingredients)
     {
         return modelsPot.GetModel(ingredients);
+    }
+
+    public Sprite GetFoodIcon(FoodTag foodTag)
+    {
+        Debug.Log(foodTag.ToString());
+        return foodIcons.Icons.Find(x => x.Tag == foodTag).Icon;
     }
 
 }

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632d7f1bfd308d648b3046ff7887db1f, type: 3}
+  m_Name: ListOfFoodIcons
+  m_EditorClassIdentifier: 
+  icons:
+  - foodTag: 0
+    icon: {fileID: 21300000, guid: 75e062c546db0e54c90a3542c597de3c, type: 3}
+  - foodTag: 2
+    icon: {fileID: 21300000, guid: a0e97ee57b783d24d895613a3745ceeb, type: 3}
+  - foodTag: 3
+    icon: {fileID: 21300000, guid: fab8f4296db14aa4b8a65e64a2fbee78, type: 3}
+  - foodTag: 5
+    icon: {fileID: 21300000, guid: ccc95b839f72d3a40a5c79778dbcb6ad, type: 3}
+  - foodTag: 6
+    icon: {fileID: 21300000, guid: 168718d9f32d9954282d16607884c93b, type: 3}
+  - foodTag: 7
+    icon: {fileID: 21300000, guid: 2c5fe019f50a3e84285a371778e67cf9, type: 3}
+  - foodTag: 8
+    icon: {fileID: 21300000, guid: 1b8eeda0a7f8b5448ae0c299e9cb576f, type: 3}
+  - foodTag: 9
+    icon: {fileID: 21300000, guid: fd9d3229231d9b3478323c260527cbfe, type: 3}
+  - foodTag: 4
+    icon: {fileID: 21300000, guid: ccc95b839f72d3a40a5c79778dbcb6ad, type: 3}
+  - foodTag: 10
+    icon: {fileID: 21300000, guid: 4040e03d1ab002043afba4feabea2b40, type: 3}

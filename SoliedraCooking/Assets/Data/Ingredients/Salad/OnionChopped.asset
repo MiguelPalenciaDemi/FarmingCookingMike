@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ba806b3707f744d896fa288126c39d, type: 3}
   m_Name: OnionChopped
   m_EditorClassIdentifier: 
-  foodTag: 0
+  foodTag: 9
   model: {fileID: 919132149155446097, guid: becff1563956011468324142444729ac, type: 3}
   spoiledModel: {fileID: 0}
   price: 1

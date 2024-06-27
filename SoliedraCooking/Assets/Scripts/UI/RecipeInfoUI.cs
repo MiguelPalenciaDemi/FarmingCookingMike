@@ -19,7 +19,7 @@ public class RecipeInfoUI : MonoBehaviour
         foreach (var ingredient in recipeSelected.Ingredients)
         {
             var item = Instantiate(imagePrefab, contentParent).GetComponent<Image>();
-            item.sprite = ingredient.Icon;
+            item.sprite = FoodManager.Instance.GetFoodIcon(ingredient.FoodTag);
         }
     }
     

@@ -39,7 +39,7 @@ public struct FoodModel
 }
 
 
-public enum FoodTag{Ham,Cheese, Lettuce, Tomato, Bread, Flour}
+public enum FoodTag{Meat,Cheese, Lettuce, Tomato, Bread, Flour, Potato, Steak, Mushroom, Onion, Water}
 public enum  IngredientState
 {
     Raw, MediumRare ,Cooked, Overcooked, Chopped, Smashed, None
