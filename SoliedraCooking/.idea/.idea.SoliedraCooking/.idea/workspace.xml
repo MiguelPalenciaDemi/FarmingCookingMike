@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Mushroom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Mushroom.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/MushroomChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/MushroomChopped.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Potatoe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/Potatoe.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/PotatoeChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Pot/MushroomPotatoSoup/PotatoeChopped.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionChopped.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionRaw.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/Salad/OnionRaw.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChopped.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChopped.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChoppedCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakChoppedCooked.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakCooked.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakRaw.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Ingredients/SteakRaw.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ingredient.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ingredient.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WorkTop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WorkTop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/RecipeInfoUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RecipeInfoUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/MyUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/MyUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/URP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Oven.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Oven.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Worktop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/Ingredient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +29,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Animation/Player/ded.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactuables/Plate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactuables/PlateTower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orders/DeliveryCounter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -104,10 +102,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2932">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2932" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -170,6 +168,10 @@
       <workItem from="1719234233431" duration="3972000" />
       <workItem from="1719307679620" duration="3172000" />
       <workItem from="1719393879887" duration="1501000" />
+      <workItem from="1719483182565" duration="2740000" />
+      <workItem from="1719496588482" duration="2666000" />
+      <workItem from="1719565041176" duration="3098000" />
+      <workItem from="1719652378914" duration="1488000" />
     </task>
     <servers />
   </component>

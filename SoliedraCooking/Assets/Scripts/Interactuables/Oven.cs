@@ -1,11 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class Oven : Workstation
 {
-    [SerializeField] private bool isOpen;
+    [Header("Audio")] 
+    [SerializeField] private EventReference openOven;
+    [SerializeField] private EventReference closeOven;
+    
+    private bool _isOpen = true; //Lo dejamos abierto al inicio
     private Animator _animator;
     private static readonly int IsOpenAnim = Animator.StringToHash("isOpen");
 
@@ -22,9 +27,9 @@ public class Oven : Workstation
         //First get the ingredient   
         _objectInWorktop.TryGetComponent(out Ingredient ingredient);
         if (!ingredient) return;
-        if (!ingredient.CanDoAction(CookAction.Cook) && isOpen) return;
+        if (!ingredient.CanDoAction(CookAction.Cook) && _isOpen) return;
       
-        if (isOpen)
+        if (_isOpen)
         {
             TurnOn(ingredient);
         }
@@ -48,7 +53,8 @@ public class Oven : Workstation
     {
         ingredient.Cook(this,speedCooking);
         _animator.SetBool(IsOpenAnim, false);
-        isOpen = false;        
+        AudioManager.Instance.PlaySoundAtPosition(closeOven,transform);
+        _isOpen = false;        
         
         ShowProgressUI(true,CookAction.Cook);
         ShowInteractUI(false);
@@ -59,7 +65,8 @@ public class Oven : Workstation
     {
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
-        isOpen = true;      
+        AudioManager.Instance.PlaySoundAtPosition(openOven,transform);
+        _isOpen = true;      
         
         ShowProgressUI(false);
         ShowInteractUI(true,ingredient.gameObject);
@@ -67,7 +74,7 @@ public class Oven : Workstation
 
     public override void TakeDrop(PlayerInteract player)
     {
-        if(isOpen)
+        if(_isOpen)
             base.TakeDrop(player);
     }
 }

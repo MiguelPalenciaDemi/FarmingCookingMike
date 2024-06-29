@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Timers;
+using FMODUnity;
 using UnityEngine;
 
 
@@ -8,6 +9,9 @@ public class Ingredient : MonoBehaviour
 {
    [SerializeField] private IngredientInfo ingredientInfo;
    [SerializeField] private Transform modelParent;
+
+   [Header("Audio")] 
+   [SerializeField] private EventReference audioNewIngredient;
    private IngredientState _ingredientState;
    private float _chopTimer;
    private float _cookingTimer = 0; //Necesitamos un timer diferente, para que no se resetee, por eso cada vez que se inicie la corrutina tampoco lo ponemos a 0
@@ -168,6 +172,10 @@ public class Ingredient : MonoBehaviour
       newModel.transform.localRotation = Quaternion.identity;
 
       _overcookTime = ingredientInfo.GetTime(CookAction.Cook) * 0.5f;//Antes de cambiar el ingrediente calculamos su tiempo para quemarse, sino perderemos esa info
+      
+      //Esto nos indica que no ha "evolucionado" sino que se acaba de crear
+      if(ingredient != ingredientInfo)
+         AudioManager.Instance.PlaySoundAtPosition(audioNewIngredient,transform);
       
       ingredientInfo = ingredient;
       _ingredientState = IngredientState.Raw;

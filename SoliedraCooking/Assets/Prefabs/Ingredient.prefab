@@ -46,3 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientInfo: {fileID: 0}
   modelParent: {fileID: 365897473242401155}
+  audioNewIngredient:
+    Guid:
+      Data1: -1166589631
+      Data2: 1079813594
+      Data3: -246467420
+      Data4: -845164839
+    Path: event:/Kitchen/PopNewIngredient

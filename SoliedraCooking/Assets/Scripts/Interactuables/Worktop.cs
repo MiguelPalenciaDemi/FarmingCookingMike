@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class Worktop : Workstation
 {
-   
+   [Header("Audio Actions")] 
+   [SerializeField] private EventReference chopEvent;
+   [SerializeField] private EventReference smashEvent;
    // ReSharper disable Unity.PerformanceAnalysis
    public override void Interact(PlayerInteract player)
    {
@@ -22,13 +25,15 @@ public class Worktop : Workstation
       if (info.CanDoAction(CookAction.Chop))
       {
          //ShowUI(IngredientState.Chopped,true);
-
+         player.ChopAnimation();
+         AudioManager.Instance.PlaySoundAtPosition(chopEvent,transform);
          ingredient.Chop(this,speedCooking);
          widgetUI.UpdateUI(ingredient.GetChopProgress());
       }
       else if (info.CanDoAction(CookAction.Smash))
       {
          //ShowUI(IngredientState.Smashed,true);
+         AudioManager.Instance.PlaySoundAtPosition(smashEvent,transform);
          ingredient.Smash(this,speedCooking);
          widgetUI.UpdateUI(ingredient.GetSmashProgress());
       }

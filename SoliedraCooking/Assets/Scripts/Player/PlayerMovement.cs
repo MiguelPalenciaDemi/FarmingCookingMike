@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,7 +16,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Rotation")]
     [SerializeField] private float turnRate = 5f;
-
+    
+    [Header("Audio")] 
+    [SerializeField] private EventReference footstepSound;
+    
     private Rigidbody _rb;
     private Animator _anim;
 
@@ -76,6 +80,12 @@ public class PlayerMovement : MonoBehaviour
     {
         _anim.SetFloat("Velocity",_rb.velocity.magnitude);
     }
+
+    public void PlayFootstep()
+    {
+        AudioManager.Instance.PlaySoundAtPosition(footstepSound,transform);
+    }
+    
 }
 
 

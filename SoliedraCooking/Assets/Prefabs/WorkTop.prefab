@@ -573,7 +573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -964.9
+      value: -968.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -665,6 +665,20 @@ MonoBehaviour:
   speedCooking: 1
   widgetUI: {fileID: 2179355014830033298}
   interactUI: {fileID: 6467513083558882522}
+  chopEvent:
+    Guid:
+      Data1: -1586414045
+      Data2: 1243817417
+      Data3: -162267768
+      Data4: -740554806
+    Path: event:/Kitchen/Cut
+  smashEvent:
+    Guid:
+      Data1: -1586414045
+      Data2: 1243817417
+      Data3: -162267768
+      Data4: -740554806
+    Path: event:/Kitchen/Cut
 --- !u!65 &3412624840414448107
 BoxCollider:
   m_ObjectHideFlags: 0

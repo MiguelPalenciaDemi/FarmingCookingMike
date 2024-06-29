@@ -7,7 +7,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactLayer;
     [SerializeField] private float interactRange;
     [SerializeField] private Transform handPos;
-    
+    [SerializeField] private GameObject knife;
     private IInteractable _objectInteractable;
     private ITakeDrop _objectPickable;
     
@@ -92,6 +92,23 @@ public class PlayerInteract : MonoBehaviour
         _animator.SetBool("Carry", false);
 
         return dropObject;
+    }
+
+    public void ChopAnimation()
+    {
+        Debug.Log("heyy chop");
+        _animator.SetTrigger("Chop");
+        knife.SetActive(true);
+    }
+
+    public void ShowKnife(bool value)
+    {
+        knife.SetActive(value);
+    }
+
+    public void HideKnife()
+    {
+        ShowKnife(false);
     }
 
     
