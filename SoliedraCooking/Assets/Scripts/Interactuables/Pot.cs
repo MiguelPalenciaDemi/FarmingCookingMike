@@ -26,6 +26,9 @@ public class Pot : MonoBehaviour
     private Workstation _workstation;//Donde está siendo tratado
 
     private MeshRenderer _waterMeshRenderer;
+
+    public List<IngredientInfo> Ingredients => _ingredients;
+
     private void Awake()
     {
         _waterMeshRenderer = waterModel.GetComponent<MeshRenderer>();

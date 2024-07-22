@@ -573,7 +573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -968.9
+      value: -964.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -585,31 +585,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.00000031199946
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.0050698267
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.9999619
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.007104287
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.814
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 180.004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 0.581
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cfca7c94f89f6fe438696560551c09b5, type: 3}
       propertyPath: m_Name
@@ -674,11 +674,11 @@ MonoBehaviour:
     Path: event:/Kitchen/Cut
   smashEvent:
     Guid:
-      Data1: -1586414045
-      Data2: 1243817417
-      Data3: -162267768
-      Data4: -740554806
-    Path: event:/Kitchen/Cut
+      Data1: 1240304515
+      Data2: 1081215335
+      Data3: -2061471341
+      Data4: 2070876580
+    Path: event:/Kitchen/Knead
 --- !u!65 &3412624840414448107
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,11 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float interactRange;
     [SerializeField] private Transform handPos;
     [SerializeField] private GameObject knife;
+    [SerializeField] private GameObject rollingPin;
+
+    [Header("Audio")]
+    [SerializeField] private EventReference takeAudio;
+    [SerializeField] private EventReference dropAudio;
     private IInteractable _objectInteractable;
     private ITakeDrop _objectPickable;
     
@@ -81,6 +87,7 @@ public class PlayerInteract : MonoBehaviour
         _objectPickedUp.transform.parent = handPos;
         _objectPickedUp.transform.localPosition = Vector3.zero;
         _animator.SetBool("Carry", true);
+        AudioManager.Instance.PlaySoundAtPosition(takeAudio,transform);
 
         //_objectPickedUp.transform.localRotation = Quaternion.identity;
     }
@@ -90,7 +97,7 @@ public class PlayerInteract : MonoBehaviour
         var dropObject = _objectPickedUp;
         _objectPickedUp = null;
         _animator.SetBool("Carry", false);
-
+        AudioManager.Instance.PlaySoundAtPosition(dropAudio,transform);
         return dropObject;
     }
 
@@ -98,10 +105,10 @@ public class PlayerInteract : MonoBehaviour
     {
         Debug.Log("heyy chop");
         _animator.SetTrigger("Chop");
-        knife.SetActive(true);
+        ShowKnife(true);
     }
 
-    public void ShowKnife(bool value)
+    private void ShowKnife(bool value)
     {
         knife.SetActive(value);
     }
@@ -109,7 +116,21 @@ public class PlayerInteract : MonoBehaviour
     public void HideKnife()
     {
         ShowKnife(false);
+        ShowRollingPin(false);
     }
+    
+    public void SmashAnimation()
+    {
+        _animator.SetTrigger("Chop");
+        ShowRollingPin(true);
+    }
+
+    private void ShowRollingPin(bool value)
+    {
+        rollingPin.SetActive(value);
+    }
+
+   
 
     
 }

@@ -1,14 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
-public class Oven : Workstation
+public class Oven : HeatStation
 {
-    [Header("Audio")] 
-    [SerializeField] private EventReference openOven;
-    [SerializeField] private EventReference closeOven;
+    
     
     private bool _isOpen = true; //Lo dejamos abierto al inicio
     private Animator _animator;
@@ -53,7 +52,8 @@ public class Oven : Workstation
     {
         ingredient.Cook(this,speedCooking);
         _animator.SetBool(IsOpenAnim, false);
-        AudioManager.Instance.PlaySoundAtPosition(closeOven,transform);
+        AudioManager.Instance.PlaySoundAtPosition(turnOnSound,transform);
+        _cookSoundEventInstance = AudioManager.Instance.PlayLoopEvent3D(cookSound, transform);
         _isOpen = false;        
         
         ShowProgressUI(true,CookAction.Cook);
@@ -65,7 +65,8 @@ public class Oven : Workstation
     {
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
-        AudioManager.Instance.PlaySoundAtPosition(openOven,transform);
+        AudioManager.Instance.PlaySoundAtPosition(turnOffSound,transform);
+        AudioManager.Instance.StopLoopEvent(_cookSoundEventInstance);
         _isOpen = true;      
         
         ShowProgressUI(false);

@@ -33,6 +33,7 @@ public class Worktop : Workstation
       else if (info.CanDoAction(CookAction.Smash))
       {
          //ShowUI(IngredientState.Smashed,true);
+         player.SmashAnimation();
          AudioManager.Instance.PlaySoundAtPosition(smashEvent,transform);
          ingredient.Smash(this,speedCooking);
          widgetUI.UpdateUI(ingredient.GetSmashProgress());

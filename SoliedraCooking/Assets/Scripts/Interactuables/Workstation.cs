@@ -8,7 +8,9 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
     [SerializeField] protected float speedCooking = 1;
     [SerializeField] protected ProgressWidget widgetUI;
     [SerializeField] protected InteractWidget interactUI;
+    
     protected GameObject _objectInWorktop;
+    public GameObject ObjectInWorktop => _objectInWorktop;
 
 
     public virtual void Interact(PlayerInteract player)

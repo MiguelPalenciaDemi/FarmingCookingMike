@@ -86,7 +86,6 @@ public class Ingredient : MonoBehaviour
    {
       _workstation = workstation;
       _cookingCoroutine = StartCoroutine(Cooking(modifier));
-      
    }
 
    public void StopCook()
@@ -94,6 +93,7 @@ public class Ingredient : MonoBehaviour
       if (_cookingCoroutine == null) return;
       
       StopCoroutine(_cookingCoroutine);
+      
       _cookingCoroutine = null;
       _workstation = null;
       
@@ -126,6 +126,10 @@ public class Ingredient : MonoBehaviour
             {
                UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
                _ingredientState = IngredientState.Cooked;
+               
+               // if(_workstation.TryGetComponent<HeatStation>(out var heatStation))
+               //    heatStation.ReadyNotification();
+
                //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE- SE TRASLADA AL ABRIR EL HORNO
                _cookingTimer = 0;
                //Do VFX things
@@ -147,7 +151,6 @@ public class Ingredient : MonoBehaviour
             {
                UpdateModel(ingredientInfo,true);
                _ingredientState = IngredientState.Overcooked;
-               
                _workstation.ForceStopInteract();
                //Do VFX things
             }
