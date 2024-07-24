@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public enum ConditionType
@@ -105,7 +106,7 @@ public class TutorialBox : MonoBehaviour
 {
     [SerializeField] private DialoguePopUp popUp;
     [SerializeField] private TutorialCondition condition;
-    
+    [SerializeField] private UnityEvent events;
     // Start is called before the first frame update
     private void Start()
     {

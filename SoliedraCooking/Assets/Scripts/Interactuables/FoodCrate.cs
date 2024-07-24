@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FoodCrate : MonoBehaviour, ITakeDrop
@@ -8,11 +9,23 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
     [SerializeField] private GameObject foodPrefab;
     [SerializeField] private IngredientInfo ingredientInfo;
     [SerializeField] private int amount;
+    [SerializeField] private TextMeshProUGUI counterUI;
     private FoodTag _foodItem;
+
+    private int Amount
+    {
+        get => amount;
+        set
+        {
+            amount = value;
+            UpdateUI();
+        }
+    }
 
     private void Awake()
     {
         _foodItem = ingredientInfo.FoodTag;
+        UpdateUI();
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -31,7 +44,7 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
             ingredient.SetIngredientInfo(ingredientInfo);//Le indicamos que ingrediente es.
             player.TakeObject(food);
             Debug.Log("Coger Objeto");
-            amount--;
+            Amount--;
         }
         else if(player.ObjectPickedUp && player.ObjectPickedUp.TryGetComponent(out Ingredient ingredient))
         {
@@ -40,12 +53,15 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
             if(ingredient.GetIngredientInfo() == ingredientInfo)//Check if we've got the same foodType in the hand and it's raw
             {
                 Debug.Log("Dejar Objeto");
-                amount++;
+                Amount++;
                 Destroy(player.DropObject());
             }
         }
     }
 
-
+    private void UpdateUI()
+    {
+        counterUI.text = amount.ToString();
+    }
     
 }

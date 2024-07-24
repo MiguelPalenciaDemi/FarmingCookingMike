@@ -7,7 +7,8 @@ using UnityEngine;
 public class DialoguePopUp : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
-    [SerializeField] private TextMeshProUGUI textMessage;
+    
+    [SerializeField, TextArea] private TextMeshProUGUI textMessage;
     [SerializeField] private GameObject tutorialSignal;
     private Transform cameraTransform;
 

@@ -1,16 +1,12 @@
-using System;
-using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 
 [CustomEditor(typeof(TutorialBox))]
 public class TutorialBoxEditor : Editor
 {
     private SerializedProperty popUpProperty;
     private SerializedProperty tutorialConditionProperty;
+    private SerializedProperty eventProperty;
     
     
 
@@ -18,6 +14,7 @@ public class TutorialBoxEditor : Editor
     {
         popUpProperty = GetProperty("popUp",serializedObject);
         tutorialConditionProperty = GetProperty("condition",serializedObject);
+        eventProperty = GetProperty("events",serializedObject);
         
         
     }
@@ -27,7 +24,8 @@ public class TutorialBoxEditor : Editor
         var instance = (TutorialBox)target;
         EditorGUILayout.PropertyField(popUpProperty, new GUIContent("PopUp"));
         //EditorGUILayout.PropertyField(conditionTypeProperty, new GUIContent("Type of Condition"));
-        EditorGUILayout.PropertyField(tutorialConditionProperty);
+        EditorGUILayout.PropertyField(tutorialConditionProperty, new GUIContent("Condition Configuration"));
+        EditorGUILayout.PropertyField(eventProperty, new GUIContent("Event when complete"));
         
         
         
@@ -66,8 +64,9 @@ public class TutorialConditionDrawerEdition : PropertyDrawer
         recipeProperty = property.FindPropertyRelative("recipeCompare");
         tagSelected = prefabTag.stringValue;
         EditorGUI.BeginProperty(position, label, property);
-        
-        EditorGUILayout.PropertyField(messageProperty);
+        EditorGUILayout.PrefixLabel("Message");
+        messageProperty.stringValue = EditorGUILayout.TextArea(messageProperty.stringValue);
+        // EditorGUILayout.PropertyField(messageProperty);
         EditorGUILayout.PropertyField(targetProperty);
         EditorGUILayout.PropertyField(conditionTypeProperty);
 

@@ -22,12 +22,20 @@ public class DeliveryCounter : Workstation
             SetObjectPosRot();
             if (OrderManager.Instance.DeliverOrder(plate))//Si se completa hacemos que desaparezca
             {
-                _objectInWorktop = null;
-                Destroy(plate.gameObject);//Meter algun efecto para dar feedback
+                StartCoroutine(DeliverDelay(plate.gameObject));
             }
                 
 
         }
+    }
+
+    private IEnumerator  DeliverDelay(GameObject gameObjectToDestroy)
+    {
+        yield return new WaitForSeconds(0.2f);
+        _objectInWorktop = null;
+        Destroy(gameObjectToDestroy,0.2f);//Meter algun efecto para dar feedback
+
+        yield return null;
     }
     
     
