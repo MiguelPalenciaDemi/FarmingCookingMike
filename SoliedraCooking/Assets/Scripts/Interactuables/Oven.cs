@@ -17,6 +17,14 @@ public class Oven : HeatStation
     {
         TryGetComponent(out _animator);
     }
+    
+    public override bool CanInteract()
+    {
+        if(!_objectInWorktop) return false; //No hay nada en el.
+        _objectInWorktop.TryGetComponent(out Ingredient ingredient);
+        if (!ingredient) return false; //No es un ingrediente
+        return ingredient.CanDoAction(CookAction.Cook) || !_isOpen; //Se podrá interactuar si ese ingrediente se puede cocinar o no está abierto
+    }
 
     // ReSharper disable Unity.PerformanceAnalysis
     public override void Interact(PlayerInteract player)
@@ -63,6 +71,7 @@ public class Oven : HeatStation
 
     private void TurnOff(Ingredient ingredient)
     {
+        TurnOffSmoke();
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
         AudioManager.Instance.PlaySoundAtPosition(turnOffSound,transform);
@@ -77,5 +86,10 @@ public class Oven : HeatStation
     {
         if(_isOpen)
             base.TakeDrop(player);
+    }
+
+    public override bool CanTakeDrop()
+    {
+        return _objectInWorktop && _isOpen;
     }
 }

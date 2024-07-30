@@ -16,4 +16,10 @@ public class Sink : Workstation
 
 
    }
+
+   public override bool CanInteract()
+   {
+       if (!_objectInWorktop) return false;
+       return _objectInWorktop.TryGetComponent(out Plate plate) || _objectInWorktop.TryGetComponent(out Pot pot);
+   }
 }

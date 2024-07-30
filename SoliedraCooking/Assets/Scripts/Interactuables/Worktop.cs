@@ -40,13 +40,16 @@ public class Worktop : Workstation
       }
          
    }
-   // Sobreescribimos para añadir la funcionalidad de mezclar ingredientes
-   public override void TakeDrop(PlayerInteract player)
-   {
-      
-     
-      base.TakeDrop(player);
-   }
 
-   
+
+   public override bool CanInteract()
+   {
+      if(!_objectInWorktop) return false;
+
+      if (!_objectInWorktop.TryGetComponent(out Ingredient ingredient)) return false;
+      
+      var info = ingredient.GetIngredientInfo();
+      return info.CanDoAction(CookAction.Chop) || info.CanDoAction(CookAction.Smash);
+
+   }
 }

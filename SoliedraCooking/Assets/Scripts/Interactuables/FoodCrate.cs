@@ -59,6 +59,11 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
         }
     }
 
+    public bool CanTakeDrop()
+    {
+        return amount > 0;
+    }
+
     private void UpdateUI()
     {
         counterUI.text = amount.ToString();

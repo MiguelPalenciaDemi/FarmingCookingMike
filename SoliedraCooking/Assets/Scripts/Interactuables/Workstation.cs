@@ -17,7 +17,12 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
     {
       
     }
-    
+
+    public virtual bool CanInteract()
+    {
+        return false;
+    }
+
     public virtual void ForceStopInteract()
     {
       
@@ -41,6 +46,12 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
             ShowInteractUI(true, _objectInWorktop);
         }
 
+    }
+
+    public virtual bool CanTakeDrop()
+    {
+
+        return _objectInWorktop;
     }
 
     private bool TryAddIngredient(PlayerInteract player)
@@ -161,6 +172,9 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
             widgetUI.ChangeIcon(action);
         
         widgetUI.gameObject.SetActive(progressUIValue);
+        
+        if(!progressUIValue)
+            widgetUI.StopWarningSound();
     }
 
     public void ShowInteractUI(bool value,GameObject ingredient = null, IngredientState state = IngredientState.None)
@@ -173,9 +187,11 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
             interactUI.Hide();
     }
 
-    public void Warning(bool value)
+    public virtual void Warning(bool value)
     {
         widgetUI.SetWarning(value);
     }
+    
+    
     
 }

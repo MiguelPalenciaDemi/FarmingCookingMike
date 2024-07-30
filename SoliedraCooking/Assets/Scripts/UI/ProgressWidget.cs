@@ -43,16 +43,21 @@ public class ProgressWidget : MonoBehaviour
     {
         progress.color = isWarning? warningColor: normalColor;
         
-        // if (isWarning)
-        // {
-        //     _warningEventSoundInstance = AudioManager.Instance.PlayLoopEvent3D(warningSound, transform);
-        // }
-        // else
-        // {
-        //     if (_warningEventSoundInstance.isValid())
-        //     {
-        //         AudioManager.Instance.StopLoopEvent(_warningEventSoundInstance);
-        //     }
-        // }
+        if (isWarning)
+        {
+            _warningEventSoundInstance = AudioManager.Instance.PlayLoopEvent3D(warningSound, transform);
+        }
+        else
+        {
+            StopWarningSound();
+        }
+    }
+
+    public void StopWarningSound()
+    {
+        if (_warningEventSoundInstance.isValid())
+        {
+            AudioManager.Instance.StopLoopEvent(_warningEventSoundInstance);
+        }
     }
 }

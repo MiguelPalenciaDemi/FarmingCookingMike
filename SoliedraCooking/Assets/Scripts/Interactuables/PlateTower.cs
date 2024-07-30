@@ -27,4 +27,9 @@ public class PlateTower : MonoBehaviour, ITakeDrop
             }
         }
     }
+
+    public bool CanTakeDrop()
+    {
+        return true;
+    }
 }

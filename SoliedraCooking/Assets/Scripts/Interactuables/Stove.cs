@@ -15,7 +15,19 @@ public class Stove : HeatStation
     {
         TryGetComponent(out _animator);
     }
+    
+    public override bool CanInteract()
+    {
+        if(!_objectInWorktop) return false; //No hay nada en el.
+        if (_objectInWorktop.TryGetComponent(out Ingredient ingredient))
+        {
+            return ingredient.CanDoAction(CookAction.Cook) || isOn; //Se podrá interactuar si ese ingrediente se puede cocinar o está encendido
+        }
 
+        if (!_objectInWorktop.TryGetComponent(out Pot pot)) return false;
+        return pot.CanCook() && !isOn;
+    }
+    
     // ReSharper disable Unity.PerformanceAnalysis
     public override void Interact(PlayerInteract player)
     {
@@ -102,6 +114,8 @@ public class Stove : HeatStation
         AudioManager.Instance.StopLoopEvent(_cookSoundEventInstance);
         ShowProgressUI(false);
         ShowInteractUI(true,ingredient.gameObject);
+        TurnOffSmoke();
+
     }
 
     private void TurnOff(Pot pot)
@@ -114,6 +128,8 @@ public class Stove : HeatStation
 
         ShowProgressUI(false);
         ShowInteractUI(true,pot.gameObject);
+        TurnOffSmoke();
+
     }
 
     public override void TakeDrop(PlayerInteract player)
@@ -128,6 +144,11 @@ public class Stove : HeatStation
                 _animator.SetTrigger("Drop");
 
         }
+    }
+
+    public override bool CanTakeDrop()
+    {
+        return _objectInWorktop && !isOn;
     }
 
     private bool CanPanAppear(PlayerInteract player)

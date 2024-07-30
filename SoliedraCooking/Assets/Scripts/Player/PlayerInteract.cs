@@ -34,6 +34,10 @@ public class PlayerInteract : MonoBehaviour
     private void Update()
     {
         CheckInteract();
+        
+        //Mostrar UI de poder interactuar
+        CheckPrompts();
+        
     }
 
     public void TakeDropInput()
@@ -46,7 +50,6 @@ public class PlayerInteract : MonoBehaviour
     {
         if(_canInteract)
             _objectInteractable.Interact(this);
-            
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -67,7 +70,6 @@ public class PlayerInteract : MonoBehaviour
         {
             _canInteract = true;
             _objectInteractable = interactable;
-           
         }
         
         if(hit.collider.TryGetComponent<ITakeDrop>(out var pickable ))
@@ -77,8 +79,7 @@ public class PlayerInteract : MonoBehaviour
         }
         
             
-        //Mostrar UI de poder interactuar
-
+        
     }
 
     public void TakeObject(GameObject objectPicked)
@@ -130,7 +131,17 @@ public class PlayerInteract : MonoBehaviour
         rollingPin.SetActive(value);
     }
 
-   
+    private void CheckPrompts()
+    {
+        InputPromptsManager.Instance.SetActiveInteractPrompt(_objectInteractable != null && _objectInteractable.CanInteract());
+        
+        //TakeCondition
+        var handFreeOtherBusy = !_objectPickedUp && _objectPickable != null && _objectPickable.CanTakeDrop();
+        var handBusyOtherFree = _objectPickedUp && _objectPickable == null;
+        var handPlateOtherBusy = (_objectPickedUp && _objectPickedUp.TryGetComponent(out Plate plate)) &&
+                                 (_objectPickable != null && _objectPickable.CanTakeDrop());
+        InputPromptsManager.Instance.SetActiveTakeDropPrompt(handBusyOtherFree || handFreeOtherBusy || handPlateOtherBusy);
+    }
 
     
 }

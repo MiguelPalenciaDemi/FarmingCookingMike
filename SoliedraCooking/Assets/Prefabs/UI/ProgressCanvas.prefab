@@ -209,6 +209,13 @@ MonoBehaviour:
     action: 1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   warningColor: {r: 0.9622642, g: 0.49999034, b: 0.031772893, a: 1}
+  warningSound:
+    Guid:
+      Data1: 83372725
+      Data2: 1151742510
+      Data3: 1112124078
+      Data4: 1418223481
+    Path: event:/Kitchen/Warning
 --- !u!1 &1837066243331004654
 GameObject:
   m_ObjectHideFlags: 0

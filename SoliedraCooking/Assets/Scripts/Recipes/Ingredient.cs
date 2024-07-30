@@ -139,6 +139,9 @@ public class Ingredient : MonoBehaviour
          }
          
          _workstation.Warning(true);
+         if(_workstation.TryGetComponent(out HeatStation heatStation))
+            heatStation.TurnOnSmoke();
+         
          while(_ingredientState == IngredientState.Cooked)//Proceso para que se queme la comida
          {
             
