@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -53,6 +54,7 @@ public class TutorialConditionDrawerEdition : PropertyDrawer
     
     
     private SerializedProperty recipeProperty;
+    private SerializedProperty destinationProperty;
     
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
@@ -62,6 +64,7 @@ public class TutorialConditionDrawerEdition : PropertyDrawer
         desiredProperty = property.FindPropertyRelative("desired");
         prefabTag = property.FindPropertyRelative("prefabCompare");
         recipeProperty = property.FindPropertyRelative("recipeCompare");
+        destinationProperty = property.FindPropertyRelative("pointCondition");
         tagSelected = prefabTag.stringValue;
         EditorGUI.BeginProperty(position, label, property);
         EditorGUILayout.PrefixLabel("Message");
@@ -82,7 +85,11 @@ public class TutorialConditionDrawerEdition : PropertyDrawer
             case ConditionType.Recipe:
                 EditorGUILayout.PropertyField(recipeProperty);
                 break;
-                
+
+            case ConditionType.Destination:
+                EditorGUILayout.PropertyField(destinationProperty);
+                break;
+            
         }
         
         

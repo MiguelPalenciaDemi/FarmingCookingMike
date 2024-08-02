@@ -366,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 1860052375797646561, guid: e5545a48d8135f5499f8f487358089c3, type: 3}
     - target: {fileID: 919132149155446097, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_Name
-      value: HamCrate
+      value: FoodCrate
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_Layer
@@ -428,6 +428,7 @@ MonoBehaviour:
   ingredientInfo: {fileID: 11400000, guid: ae6058e984c55954aaa2b6dda6b16f91, type: 2}
   amount: 5
   counterUI: {fileID: 2625833491768828608}
+  crateEmpty: {fileID: 1490014688594724021, guid: 3a7e7e9b9f729334092c64c534d4e236, type: 3}
 --- !u!4 &1150232712536788885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}

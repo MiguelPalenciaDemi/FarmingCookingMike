@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ba806b3707f744d896fa288126c39d, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  foodTag: 0
+  foodTag: 10
   model: {fileID: 919132149155446097, guid: cfd315b109591ce4ebbf92027dc5b77e, type: 3}
   spoiledModel: {fileID: 0}
   price: 1
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 4040e03d1ab002043afba4feabea2b40, type: 3}
   actions: []

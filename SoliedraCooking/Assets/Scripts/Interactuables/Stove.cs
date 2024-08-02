@@ -137,11 +137,20 @@ public class Stove : HeatStation
         if (!isOn)
         {
             base.TakeDrop(player);
-            
-            if(CanPanDisappear(player))
-                _animator.SetTrigger("Take");
-            else if(CanPanAppear(player))
-                _animator.SetTrigger("Drop");
+
+            if (CanPanDisappear(player))
+            {
+                //_animator.SetTrigger("Take");
+                _animator.SetBool("IsPanActive", false);
+                Debug.Log("Desaparece la sarten");
+            }
+            else if (CanPanAppear(player))
+            {
+                //_animator.SetTrigger("Drop");
+                _animator.SetBool("IsPanActive", true);
+
+                Debug.Log("Aparece la sarten");
+            }
 
         }
     }
@@ -153,11 +162,13 @@ public class Stove : HeatStation
 
     private bool CanPanAppear(PlayerInteract player)
     {
-        return _objectInWorktop && _objectInWorktop.GetComponent<Ingredient>();
+        
+        return !player.ObjectPickedUp && _objectInWorktop && _objectInWorktop.GetComponent<Ingredient>();
     }
 
     private bool CanPanDisappear(PlayerInteract player)
     {
-        return (player.ObjectPickedUp && player.ObjectPickedUp.GetComponent<Ingredient>()) || (_objectInWorktop &&_objectInWorktop.GetComponent<Plate>());
+        // return (player.ObjectPickedUp && player.ObjectPickedUp.GetComponent<Ingredient>()) || (_objectInWorktop &&_objectInWorktop.GetComponent<Plate>());
+        return !_objectInWorktop|| (_objectInWorktop &&_objectInWorktop.GetComponent<Plate>());
     }
 }

@@ -18,12 +18,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b992a3cfc95f84247b36e3f9e285d83c, type: 2}
   recipeImage: {fileID: 21300000, guid: f48ab6bd6dba67c4982a9b94dc021203, type: 3}
   timeToPrepare: 60
-  description: '-Add water to the pot.
+  description: '-Add water to the pot in the sink.
 
-    -Chop the potato and add it to the pot.
+    -Chop the potato and add
+    it to the pot.
 
-    -Chop
-    the mushroom and add it to the pot.
+    -Chop the mushroom and add it to the pot.
 
-    -Put the pot on the fire and let it
-    cook.'
+    -Put the pot
+    on the fire and let it cook.'

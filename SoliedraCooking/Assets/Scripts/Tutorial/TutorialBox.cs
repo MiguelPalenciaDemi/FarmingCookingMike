@@ -8,7 +8,7 @@ using UnityEngine.Events;
 [Serializable]
 public enum ConditionType
 {
-    Ingredient, Object, Recipe
+    Ingredient, Object, Recipe, Destination
 }
 [Serializable]
 public struct TutorialCondition
@@ -21,6 +21,7 @@ public struct TutorialCondition
     [SerializeField] private ConditionType conditionType;
     [SerializeField] private string prefabCompare;
     [SerializeField] private Recipe recipeCompare;
+    [SerializeField] private PointCondition pointCondition;
     
 
     public bool IsComplete()
@@ -97,6 +98,11 @@ public struct TutorialCondition
                     }
                 }
                 break;
+            
+            case ConditionType.Destination:
+                    return pointCondition.IsPlayerIn();
+                break;
+                
         }
        
         return false;
@@ -116,9 +122,12 @@ public class TutorialBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(condition.IsComplete())
+
+        if (condition.IsComplete())
+        {
+            events.Invoke();
             TutorialManager.Instance.CompleteTutorial();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

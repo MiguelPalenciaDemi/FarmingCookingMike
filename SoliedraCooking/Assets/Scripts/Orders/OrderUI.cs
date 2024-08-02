@@ -10,6 +10,7 @@ public class OrderUI : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private Image progress;
+    [SerializeField] private GameObject timeBarContainer;
     [SerializeField] private TextMeshProUGUI textRecipe;
     [SerializeField] private GameObject completeUI;
     private Animator _animator;
@@ -17,6 +18,7 @@ public class OrderUI : MonoBehaviour
     private bool _completed;
     private float _timer;
     private float _timeToComplete;
+    private bool _noTime;
 
     private void Awake()
     {
@@ -31,16 +33,25 @@ public class OrderUI : MonoBehaviour
         _animator.SetTrigger("Complete");
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="spriteRecipe"></param>
+    /// <param name="nameRecipe"></param>
+    /// <param name="time">Si quieres que no tenga un tiempo para ser completada debemos darle un valor negativo o igual a 0</param>
     public void SetUp(Sprite spriteRecipe,string nameRecipe, float time)
     {
         image.sprite = spriteRecipe;
         textRecipe.text = nameRecipe;
         _timeToComplete = time;
+        _noTime = time <= 0; //si le pasamos un valor igual a 0 o menor, la receta no será con tiempo
+        if(_noTime)
+            timeBarContainer.SetActive(false);
     }
 
     private void Update()
     {
-        if(_started && !_completed)
+        if(!_noTime && _started && !_completed)
         {
 
             _timer += Time.deltaTime;

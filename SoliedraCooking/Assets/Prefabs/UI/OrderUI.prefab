@@ -461,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 6733585152829955810}
   progress: {fileID: 3310977643011050988}
+  timeBarContainer: {fileID: 5966142824642500603}
   textRecipe: {fileID: 1241512206791472549}
   completeUI: {fileID: 7382160161623221967}
 --- !u!95 &6795483785128821653

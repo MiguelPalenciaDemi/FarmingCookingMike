@@ -25,20 +25,37 @@ public class OrderManager : MonoBehaviour
             Destroy(this);
         else
             instance = this;
+        orders = new List<OrderStruct>();
     }
 
     private void Start()
     {
-        orders = new List<OrderStruct>();
-        ManageOrder();
+        //ManageOrder();
         UpdateMoneyUI();
     }
 
-    public void GenerateNewOrder()
+    public void GenerateRandomOrder(bool isTimeTrial)
     {
         var order = new Order(currentRecipeBook.GetRandomRecipe());
         var visual = Instantiate(orderUIPrefab, orderContainer).GetComponent<OrderUI>();
-        var newOrder = new OrderStruct(order, visual);
+        var newOrder = new OrderStruct(order, visual, isTimeTrial);
+        orders.Add(newOrder);
+    }
+
+    public void GenerateNewOrderNoTime(Recipe newRecipe)
+    {
+        var order = new Order(newRecipe);
+        var visual = Instantiate(orderUIPrefab, orderContainer).GetComponent<OrderUI>();
+        var newOrder = new OrderStruct(order, visual,false);
+        orders.Add(newOrder);
+        Debug.Log(newRecipe.name);
+    }
+    
+    public void GenerateNewOrderWithTime(Recipe newRecipe)
+    {
+        var order = new Order(newRecipe);
+        var visual = Instantiate(orderUIPrefab, orderContainer).GetComponent<OrderUI>();
+        var newOrder = new OrderStruct(order, visual,true);
         orders.Add(newOrder);
     }
 
@@ -46,7 +63,7 @@ public class OrderManager : MonoBehaviour
     {
         if (orders.Count<maxOrders)
         {
-            GenerateNewOrder();
+            GenerateRandomOrder(true);
             Invoke(nameof(ManageOrder),Random.Range(minTimeBetweenOrders,maxTimeBetweenOrders));
         }
         else
@@ -101,12 +118,20 @@ struct OrderStruct
     public Order Order => _order;
     public OrderUI UI => _orderUI;
 
-    public OrderStruct(Order order, OrderUI orderUI)
+    // public OrderStruct(Order order, OrderUI orderUI)
+    // {
+    //     _order = order;
+    //     _orderUI = orderUI;
+    //     
+    //     _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name, _order.Recipe.TimeToPrepare);
+    // }
+    
+    public OrderStruct(Order order, OrderUI orderUI, bool isTimeTrial)
     {
         _order = order;
         _orderUI = orderUI;
-        
-        _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name, _order.Recipe.TimeToPrepare);
+        var time = isTimeTrial ? _order.Recipe.TimeToPrepare : 0;
+        _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name, time);
     }
 
     public void Complete()

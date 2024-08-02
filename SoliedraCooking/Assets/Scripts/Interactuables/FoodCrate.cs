@@ -10,21 +10,33 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
     [SerializeField] private IngredientInfo ingredientInfo;
     [SerializeField] private int amount;
     [SerializeField] private TextMeshProUGUI counterUI;
+    [SerializeField] private Mesh crateEmpty;
     private FoodTag _foodItem;
-
+    private MeshFilter currentMesh;
+    private Mesh originalMesh;
     private int Amount
     {
         get => amount;
         set
         {
             amount = value;
+            CheckEmpty();
             UpdateUI();
         }
+    }
+
+    private void CheckEmpty()
+    {
+        currentMesh.mesh = amount == 0 ? crateEmpty : originalMesh;
     }
 
     private void Awake()
     {
         _foodItem = ingredientInfo.FoodTag;
+        currentMesh = GetComponent<MeshFilter>();
+        originalMesh = currentMesh.mesh;
+        
+        CheckEmpty();
         UpdateUI();
     }
 
@@ -68,5 +80,10 @@ public class FoodCrate : MonoBehaviour, ITakeDrop
     {
         counterUI.text = amount.ToString();
     }
-    
+
+    public void SetCrateAmount(int newValue)
+    {
+        Amount = newValue;
+
+    }
 }

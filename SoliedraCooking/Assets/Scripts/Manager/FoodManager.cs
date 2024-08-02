@@ -49,7 +49,6 @@ public class FoodManager : MonoBehaviour
 
     public Sprite GetFoodIcon(FoodTag foodTag)
     {
-        Debug.Log(foodTag.ToString());
         return foodIcons.Icons.Find(x => x.Tag == foodTag).Icon;
     }
 
