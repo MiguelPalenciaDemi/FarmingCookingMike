@@ -59,6 +59,15 @@ public class OrderManager : MonoBehaviour
         orders.Add(newOrder);
     }
 
+    public Order GenerateTutorialOrder(Recipe newRecipe)
+    {
+        var order = new Order(newRecipe);
+        var visual = Instantiate(orderUIPrefab, orderContainer).GetComponent<OrderUI>();
+        var newOrder = new OrderStruct(order, visual,true, true);
+        orders.Add(newOrder);
+        return newOrder.Order;
+    }
+
     private void ManageOrder()
     {
         if (orders.Count<maxOrders)
@@ -85,10 +94,17 @@ public class OrderManager : MonoBehaviour
     public void FailOrder(OrderUI orderUI)
     {
         var index =orders.FindIndex(x => x.UI == orderUI);
-        if(index!=-1)
-            orders.RemoveAt(index);
+        if (index == -1) return;
         
+        //En caso de que no sea una order que se repite nos dará true por la que podremos eliminarla de la lista
+        if (!orders[index].Fail()) return;
+        
+        Destroy(orders[index].UI.gameObject);//Destruimos ese gameobject
+        orders.RemoveAt(index);
+
     }
+    
+    
 
     private float CalculateScore(List<IngredientInfo> ingredients)
     {
@@ -114,25 +130,29 @@ struct OrderStruct
 {
     private Order _order;
     private OrderUI _orderUI;
-
+    private bool _isOrderLoop;
     public Order Order => _order;
     public OrderUI UI => _orderUI;
-
-    // public OrderStruct(Order order, OrderUI orderUI)
-    // {
-    //     _order = order;
-    //     _orderUI = orderUI;
-    //     
-    //     _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name, _order.Recipe.TimeToPrepare);
-    // }
-    
-    public OrderStruct(Order order, OrderUI orderUI, bool isTimeTrial)
+    public OrderStruct(Order order, OrderUI orderUI, bool isTimeTrial, bool isLoop = false)
     {
         _order = order;
         _orderUI = orderUI;
         var time = isTimeTrial ? _order.Recipe.TimeToPrepare : 0;
         _orderUI.SetUp(_order.Recipe.RecipeImage, _order.Recipe.name, time);
+        _isOrderLoop = isLoop;
     }
+
+    public bool Fail()
+    {
+        if (!_isOrderLoop) return true;
+        
+        _orderUI.ResetUI();
+        return false;
+
+    }
+    
+    
+    
 
     public void Complete()
     {

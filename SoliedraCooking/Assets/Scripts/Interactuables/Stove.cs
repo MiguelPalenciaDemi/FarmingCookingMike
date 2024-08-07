@@ -114,7 +114,8 @@ public class Stove : HeatStation
         AudioManager.Instance.StopLoopEvent(_cookSoundEventInstance);
         ShowProgressUI(false);
         ShowInteractUI(true,ingredient.gameObject);
-        TurnOffSmoke();
+        TurnOffBurntSmoke();
+        TurnOffCookSmoke();
 
     }
 
@@ -128,7 +129,9 @@ public class Stove : HeatStation
 
         ShowProgressUI(false);
         ShowInteractUI(true,pot.gameObject);
-        TurnOffSmoke();
+        TurnOffBurntSmoke();
+        TurnOffCookSmoke();
+
 
     }
 

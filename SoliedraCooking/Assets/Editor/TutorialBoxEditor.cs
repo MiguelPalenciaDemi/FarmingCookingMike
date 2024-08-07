@@ -82,10 +82,9 @@ public class TutorialConditionDrawerEdition : PropertyDrawer
                 tagSelected = EditorGUILayout.TagField("Tag To Compare", tagSelected);
                 prefabTag.stringValue = tagSelected;
                 break;
-            case ConditionType.Recipe:
+            case ConditionType.Recipe or ConditionType.OrderInTime :
                 EditorGUILayout.PropertyField(recipeProperty);
                 break;
-
             case ConditionType.Destination:
                 EditorGUILayout.PropertyField(destinationProperty);
                 break;

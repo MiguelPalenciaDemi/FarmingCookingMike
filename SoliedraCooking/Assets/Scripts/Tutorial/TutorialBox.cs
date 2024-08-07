@@ -8,7 +8,7 @@ using UnityEngine.Events;
 [Serializable]
 public enum ConditionType
 {
-    Ingredient, Object, Recipe, Destination
+    Ingredient, Object, Recipe, Destination, OrderInTime
 }
 [Serializable]
 public struct TutorialCondition
@@ -22,7 +22,15 @@ public struct TutorialCondition
     [SerializeField] private string prefabCompare;
     [SerializeField] private Recipe recipeCompare;
     [SerializeField] private PointCondition pointCondition;
-    
+    private Order _orderCondition;
+
+    public void Start()
+    {
+        if (conditionType == ConditionType.OrderInTime)
+        {
+            _orderCondition = OrderManager.Instance.GenerateTutorialOrder(recipeCompare);
+        }
+    }
 
     public bool IsComplete()
     {
@@ -102,7 +110,11 @@ public struct TutorialCondition
             case ConditionType.Destination:
                     return pointCondition.IsPlayerIn();
                 break;
-                
+
+            case ConditionType.OrderInTime:
+                return _orderCondition.IsDone;
+                break;
+            
         }
        
         return false;
@@ -117,6 +129,7 @@ public class TutorialBox : MonoBehaviour
     private void Start()
     {
         popUp.SetText(condition.ConditionMessage);
+        condition.Start();
     }
 
     // Update is called once per frame

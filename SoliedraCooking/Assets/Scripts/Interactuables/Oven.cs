@@ -71,7 +71,8 @@ public class Oven : HeatStation
 
     private void TurnOff(Ingredient ingredient)
     {
-        TurnOffSmoke();
+        TurnOffBurntSmoke();
+        TurnOffCookSmoke();
         ingredient.StopCook();
         _animator.SetBool(IsOpenAnim, true);
         AudioManager.Instance.PlaySoundAtPosition(turnOffSound,transform);

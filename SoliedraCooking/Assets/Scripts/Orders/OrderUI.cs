@@ -66,9 +66,16 @@ public class OrderUI : MonoBehaviour
     public void Delete()
     {
         OrderManager.Instance.FailOrder(this);
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
+    public void ResetUI()
+    {
+        _animator.SetTrigger("Reset");
+        _timer = 0;
+        progress.fillAmount = 0;
+    }
+    
     private void Fail()
     {
         Debug.Log("Faaail");

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HeatStation : Workstation
 {
+    [SerializeField] private ParticleSystem cookSmoke;
     [SerializeField] private ParticleSystem burntSmoke;
     [Header("Audio")] 
     [SerializeField] protected EventReference turnOnSound;
@@ -32,14 +33,26 @@ public class HeatStation : Workstation
         widgetUI.SetWarning(value);
     }
 
-    public void TurnOnSmoke()
+    public void TurnOnBurntSmoke()
     {
-        burntSmoke.Play();
+        if(!burntSmoke.isPlaying)
+            burntSmoke.Play();
     }
 
-    public void TurnOffSmoke()
+    protected void TurnOffBurntSmoke()
     {
         burntSmoke.Stop();
+    }
+    
+    public void TurnOnCookSmoke()
+    {
+        if(!cookSmoke.isPlaying)
+            cookSmoke.Play();
+    }
+
+    public void TurnOffCookSmoke()
+    {
+        cookSmoke.Stop();
     }
     
 }

@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using System.Timers;
+
 using FMODUnity;
 using UnityEngine;
 
@@ -110,6 +110,7 @@ public class Ingredient : MonoBehaviour
    private IEnumerator Cooking(float modifier)
    {
       var cookTime = ingredientInfo.GetTime(CookAction.Cook);
+      var heatStation = _workstation.GetComponent<HeatStation>();
       while (_ingredientState != IngredientState.Overcooked)
       {
          _workstation.Warning(false);
@@ -121,12 +122,12 @@ public class Ingredient : MonoBehaviour
             
             //Actualizamos la UI
             _workstation.UpdateUI(GetCookedProgress());
-
+            heatStation.TurnOnCookSmoke();
             if (_cookingTimer > cookTime)
             {
                UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
                _ingredientState = IngredientState.Cooked;
-               
+               heatStation.TurnOffCookSmoke();
                // if(_workstation.TryGetComponent<HeatStation>(out var heatStation))
                //    heatStation.ReadyNotification();
 
@@ -139,8 +140,7 @@ public class Ingredient : MonoBehaviour
          }
          
          _workstation.Warning(true);
-         if(_workstation.TryGetComponent(out HeatStation heatStation))
-            heatStation.TurnOnSmoke();
+         
          
          while(_ingredientState == IngredientState.Cooked)//Proceso para que se queme la comida
          {
@@ -149,7 +149,9 @@ public class Ingredient : MonoBehaviour
             
             //Actualizamos la UI
             _workstation.UpdateUI(GetOvercookedProgress());
-
+            if(heatStation && _cookingTimer > cookTime * 0.1f )
+               heatStation.TurnOnBurntSmoke();
+            
             if (_cookingTimer > cookTime * 0.5f)
             {
                UpdateModel(ingredientInfo,true);

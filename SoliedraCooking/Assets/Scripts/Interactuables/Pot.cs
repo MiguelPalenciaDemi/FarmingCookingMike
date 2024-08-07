@@ -105,7 +105,8 @@ public class Pot : MonoBehaviour
 
     public bool CanCook()
     {
-        return _hasWater && FoodManager.Instance.CheckPotRecipe(_ingredients);
+        return _hasWater && FoodManager.Instance.CheckPotRecipe(_ingredients) &&
+               _ingredientState < IngredientState.Cooked;
     }
 
     public void Cook(Workstation workstation, float modifier)
@@ -120,36 +121,29 @@ public class Pot : MonoBehaviour
         if (_cookingCoroutine == null) return;
         StopCoroutine(_cookingCoroutine);
       
-        // //Si está cocinado o "quemado" cambiaremos el modelo
-        // if(_ingredientState == IngredientState.Cooked) 
-        //     UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook));
-        // else if(_ingredientState == IngredientState.Overcooked)
-        //     UpdateModel(ingredientInfo.CompleteAction(CookAction.Cook),true);
-        //
-        // _cookingCoroutine = null;
-        // _workstation = null;
-
     }
     private IEnumerator Cooking(float modifier)
     {
+        var heatStation = _workstation.GetComponent<HeatStation>();
+
         while (_ingredientState != IngredientState.Overcooked)
         {
             _workstation.Warning(false);
 
             while(_ingredientState != IngredientState.Cooked)//Proceso para que se cocine la comida
             {
-                Debug.Log("Cooking: " +_cookingTimer);
                 _cookingTimer += Time.deltaTime * modifier;
             
                 //Actualizamos la UI
                 _workstation.UpdateUI(GetCookedProgress());
-
+                heatStation.TurnOnCookSmoke();
                 if (_cookingTimer > cookTime)
                 {
                     _ingredientState = IngredientState.Cooked;
                     _waterMeshRenderer.material = soupWaterMaterial;
                     //UpdateModel(); AQUI DEBERIAMOS LLAMAR AL NUEVO INGREDIENTE- SE TRASLADA AL ABRIR EL HORNO
                     _cookingTimer = 0;
+                    heatStation.TurnOffCookSmoke();
                     //Do VFX things
                 }
 
@@ -164,7 +158,8 @@ public class Pot : MonoBehaviour
             
                 //Actualizamos la UI
                 _workstation.UpdateUI(GetOvercookedProgress());
-
+                if(_cookingTimer>cookTime*0.1f)
+                    heatStation.TurnOnBurntSmoke();
                 if (_cookingTimer > cookTime * 0.5f)
                 {
                     _ingredientState = IngredientState.Overcooked;
