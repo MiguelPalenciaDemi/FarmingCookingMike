@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,9 +18,8 @@ public class InitialTransitionController : MonoBehaviour
     private float maxRadius; //Radius to cover the whole screen
     private float currentRadius; 
     private float timer;//time since animation started
-
     private RectTransform cavasRectTransform;
-
+    
     private void Awake()
     {
         cavasRectTransform = GetComponent<RectTransform>();
@@ -46,6 +43,8 @@ public class InitialTransitionController : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
+        InputManager.Instance.ActiveControl(false);
+
         while (timer<timeTransition)
         {
             timer += Time.deltaTime;
@@ -54,11 +53,15 @@ public class InitialTransitionController : MonoBehaviour
             yield return null;
         }
         timer = 0;
+        InputManager.Instance.ActiveControl(true);
 
     }
     
     private IEnumerator FadeOut()
     {
+        //_inputManager.ActiveControl(false);
+        InputManager.Instance.ActiveControl(false);
+        
         while (timer<timeTransition)
         {
             timer += Time.deltaTime;
@@ -68,6 +71,7 @@ public class InitialTransitionController : MonoBehaviour
         }
 
         timer = 0;
+
     }
 
     private void SetUpCorrectResolution()
@@ -89,5 +93,22 @@ public class InitialTransitionController : MonoBehaviour
     {
         InitAnimation();
         StartCoroutine(nameof(FadeIn));
+    }
+
+    public IEnumerator RestartWithAction(System.Action callback)
+    {
+        InitAnimation();
+        yield return StartCoroutine(nameof(FadeOut));
+        callback?.Invoke();
+        InitAnimation();        
+        yield return StartCoroutine(nameof(FadeIn));
+        
+    }
+    
+    public IEnumerator EndWithAction(System.Action callback)
+    {
+        Debug.Log("hey empiezo la animacion");
+        yield return StartCoroutine(nameof(FadeOut));
+        callback?.Invoke();
     }
 }

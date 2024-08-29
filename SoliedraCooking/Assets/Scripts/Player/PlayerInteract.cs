@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
     
     private GameObject _objectPickedUp;
     private Animator _animator;
-
+    
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -136,11 +136,16 @@ public class PlayerInteract : MonoBehaviour
         InputPromptsManager.Instance.SetActiveInteractPrompt(_objectInteractable != null && _objectInteractable.CanInteract());
         
         //TakeCondition
-        var handFreeOtherBusy = !_objectPickedUp && _objectPickable != null && _objectPickable.CanTakeDrop();
-        var handBusyOtherFree = _objectPickedUp && _objectPickable == null;
+        var handFreeOtherBusy = !_objectPickedUp && _objectPickable != null && _objectPickable.CanTakeDrop(); //Coger
+        var handBusyOtherFree = _objectPickedUp && _objectPickable != null && !_objectPickable.CanTakeDrop(); //Dejar
         var handPlateOtherBusy = (_objectPickedUp && _objectPickedUp.TryGetComponent(out Plate plate)) &&
-                                 (_objectPickable != null && _objectPickable.CanTakeDrop());
-        InputPromptsManager.Instance.SetActiveTakeDropPrompt(handBusyOtherFree || handFreeOtherBusy || handPlateOtherBusy);
+                             (_objectPickable != null && _objectPickable.CanTakeDrop()); // Tenemos un plato en la mano y en la encimera algo
+        var workstation = _objectPickable as Workstation;
+        ////Tienes un plato en la mano y enfrente tienes un worktation
+        var handIngredientOtherBusy = (_objectPickedUp && _objectPickedUp.TryGetComponent(out Ingredient ingredient)) &&
+                                  (workstation && workstation.ObjectInWorktop && workstation.ObjectInWorktop.GetComponent<Plate>());
+                                      
+        InputPromptsManager.Instance.SetActiveTakeDropPrompt(handBusyOtherFree || handFreeOtherBusy || handPlateOtherBusy || handIngredientOtherBusy);
     }
 
     

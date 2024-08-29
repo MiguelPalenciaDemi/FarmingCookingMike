@@ -50,6 +50,8 @@ public class Oven : HeatStation
 
     public override void ForceStopInteract()
     {
+        if (!_objectInWorktop) return;
+        
         _objectInWorktop.TryGetComponent(out Ingredient ingredient);
         if (!ingredient) return;
         
@@ -92,5 +94,11 @@ public class Oven : HeatStation
     public override bool CanTakeDrop()
     {
         return _objectInWorktop && _isOpen;
+    }
+
+    public override void RestartWorkstation()
+    {
+        ForceStopInteract();
+        base.RestartWorkstation();
     }
 }

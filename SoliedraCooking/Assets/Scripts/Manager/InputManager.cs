@@ -16,12 +16,22 @@ public class InputManager : MonoBehaviour
     private PlayerInput _playerInput;
     private string _currentScheme;
     private bool _onMenu;
+    
     private void Awake()
     {
+        if (_instance)
+            Destroy(this);
+        else
+            _instance = this;
+        
         //GetScripts from Player
-        player.TryGetComponent(out _playerInteract);
-        player.TryGetComponent(out _playerMovement);
         _playerInput = GetComponent<PlayerInput>();
+        if (player)
+        {
+            player.TryGetComponent(out _playerInteract);
+            player.TryGetComponent(out _playerMovement);
+        }
+        
         
         
     }
@@ -33,14 +43,21 @@ public class InputManager : MonoBehaviour
 
     private void CheckCurrentScheme()
     {
-        if(_playerInput.currentControlScheme != null && _currentScheme == _playerInput.currentControlScheme) return;
+        var promptManager = InputPromptsManager.Instance;
+        if(!promptManager || _playerInput.currentControlScheme != null && _currentScheme == _playerInput.currentControlScheme) return;
 
         _currentScheme = _playerInput.currentControlScheme;
         var mode = _currentScheme == "Keyboard" ? InputMode.Keyboard : InputMode.Gamepad; 
-        InputPromptsManager.Instance.SetInputMode(mode);
+        promptManager.SetInputMode(mode);
     }
-    
 
+    public void ActiveControl(bool value)
+    {
+        if(value)
+            _playerInput.ActivateInput();
+        else 
+            _playerInput.DeactivateInput();
+    }
     public void OnMove(InputValue value)
     {
         if(!_onMenu)
@@ -61,18 +78,50 @@ public class InputManager : MonoBehaviour
 
     public void OnNavigate(InputValue value)
     {
-        
         Debug.Log("a navegar");
         RecipebookUI.Instance.Navigate(value.Get<float>());
     }
 
     public void OnShowRecipeBook()
     {
+        if(_playerInput.currentActionMap.name == "MenuNavigation") return;
+        
         _onMenu = !_onMenu;
         _playerInput.SwitchCurrentActionMap(_onMenu ? "UI" : "Player");
 
         RecipebookUI.Instance.ShowRecipeBook();
     }
 
-    
+    #region MenuNavigation
+
+    public void OnNavigateMenu(InputValue value)
+    {
+        MenuManager.Instance.Navigate(value);
+    }
+
+    public void OnSelect()
+    {
+        MenuManager.Instance.Select();
+    }
+
+    public void OnShowMenu()
+    {
+        if(_playerInput.currentActionMap.name == "UI" && MenuManager.Instance.IsThereMenuOptions()) return;
+        
+        _onMenu = !_onMenu;
+        _playerInput.SwitchCurrentActionMap(_onMenu ? "MenuNavigation" : "Player");
+        
+        MenuManager.Instance.ShowMenu();
+
+    }
+
+    public void SetMenuNavigable(bool value)
+    {
+        _playerInput.SwitchCurrentActionMap(value ? "MenuNavigation" : "Player");
+
+    }
+
+    #endregion
+
+   
 }

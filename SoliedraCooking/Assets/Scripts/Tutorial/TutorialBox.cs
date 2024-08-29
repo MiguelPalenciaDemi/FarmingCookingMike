@@ -159,4 +159,9 @@ public class TutorialBox : MonoBehaviour
 
         }
     }
+
+    public void RestartTutorial()
+    {
+        condition.Start();
+    }
 }

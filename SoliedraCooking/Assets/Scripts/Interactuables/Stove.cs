@@ -72,10 +72,20 @@ public class Stove : HeatStation
 
     public override void ForceStopInteract()
     {
-        _objectInWorktop.TryGetComponent(out Ingredient ingredient);
-        if (!ingredient) return;
+        if(!_objectInWorktop) return;
         
-        TurnOff(ingredient);
+        _objectInWorktop.TryGetComponent(out Ingredient ingredient);
+        if (ingredient)
+        {
+            TurnOff(ingredient);
+            return;
+        }
+        
+        _objectInWorktop.TryGetComponent(out Pot pot);
+        if (!pot) return;
+        
+        TurnOff(pot);
+        
     }
 
     private void TurnOn(Ingredient ingredient)
@@ -173,5 +183,13 @@ public class Stove : HeatStation
     {
         // return (player.ObjectPickedUp && player.ObjectPickedUp.GetComponent<Ingredient>()) || (_objectInWorktop &&_objectInWorktop.GetComponent<Plate>());
         return !_objectInWorktop|| (_objectInWorktop &&_objectInWorktop.GetComponent<Plate>());
+    }
+
+    public override void RestartWorkstation()
+    {
+        ForceStopInteract();
+        _animator.SetBool("IsPanActive", false);
+        base.RestartWorkstation();
+        
     }
 }

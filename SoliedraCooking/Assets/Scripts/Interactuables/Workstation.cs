@@ -191,7 +191,14 @@ public class Workstation : MonoBehaviour, IInteractable,ITakeDrop
     {
         widgetUI.SetWarning(value);
     }
-    
+
+    public virtual void RestartWorkstation()
+    {
+        ShowInteractUI(false);
+        ShowProgressUI(false);
+        if(_objectInWorktop)
+            Destroy(_objectInWorktop);
+    }
     
     
 }

@@ -65,8 +65,10 @@ public class OrderUI : MonoBehaviour
 
     public void Delete()
     {
-        OrderManager.Instance.FailOrder(this);
-        //Destroy(gameObject);
+        if(!_completed)
+            OrderManager.Instance.FailOrder(this);
+        
+        Destroy(gameObject);
     }
 
     public void ResetUI()
@@ -91,5 +93,11 @@ public class OrderUI : MonoBehaviour
     public void StartTimer()
     {
         _started = true;
+    }
+
+    public void Clean()
+    {
+        _completed = true;
+        Fail();
     }
 }

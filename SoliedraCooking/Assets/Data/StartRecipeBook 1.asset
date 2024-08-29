@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ec0304c7d904da441b26ad4321d49e19, type: 3}
   m_Name: StartRecipeBook 1
   m_EditorClassIdentifier: Assembly-CSharp::RecipeBook
   recipes:

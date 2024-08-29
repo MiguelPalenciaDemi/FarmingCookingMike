@@ -8,9 +8,15 @@ public class TutorialManager : MonoBehaviour
 {
     private static TutorialManager _instance;
     public static TutorialManager Instance => _instance;
-    private Queue<TutorialBox> tutorialBoxesQueue;
+    private Queue<TutorialBox> _tutorialBoxesQueue;
     [SerializeField] private TutorialBox[] tutorialBoxes;
     [SerializeField] private UnityEvent startAction;
+
+    [Header("Restart TutorialBox")] 
+    [SerializeField] private Workstation[] workstations;
+    [SerializeField] private PlayerInteract playerInteract;
+    [SerializeField] private InitialTransitionController transitionController;
+    
 
     private void Awake()
     {
@@ -19,10 +25,10 @@ public class TutorialManager : MonoBehaviour
         else
             _instance = this;
 
-        tutorialBoxesQueue = new Queue<TutorialBox>();
+        _tutorialBoxesQueue = new Queue<TutorialBox>();
         foreach (var tutorialBox in tutorialBoxes)
         {
-            tutorialBoxesQueue.Enqueue(tutorialBox);
+            _tutorialBoxesQueue.Enqueue(tutorialBox);
         }
     }
 
@@ -34,14 +40,32 @@ public class TutorialManager : MonoBehaviour
 
     private void ShowNext()
     {
-        if (tutorialBoxesQueue.Count>0)
-            tutorialBoxesQueue.Peek().gameObject.SetActive(true);
+        if (_tutorialBoxesQueue.Count>0)
+            _tutorialBoxesQueue.Peek().gameObject.SetActive(true);
     }
 
     public void CompleteTutorial()
     {
-        tutorialBoxesQueue.Dequeue().gameObject.SetActive(false);
+        _tutorialBoxesQueue.Dequeue().gameObject.SetActive(false);
         ShowNext();
+    }
 
+    public void RestartFailTutorialBox()
+    {
+        StartCoroutine(transitionController.RestartWithAction(RestartCurrentTutorialBox));
+    }
+
+    private void RestartCurrentTutorialBox()
+    {
+        foreach (var workstation in workstations)
+            workstation.RestartWorkstation();
+
+        if (playerInteract.ObjectPickedUp)
+            Destroy(playerInteract.ObjectPickedUp);
+
+        var currentTutorialBox = _tutorialBoxesQueue.Peek();
+        
+        playerInteract.transform.position = currentTutorialBox.transform.position;
+        currentTutorialBox.RestartTutorial();
     }
 }

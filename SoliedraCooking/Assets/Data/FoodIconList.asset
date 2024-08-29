@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 632d7f1bfd308d648b3046ff7887db1f, type: 3}
-  m_Name: ListOfFoodIcons
+  m_Name: FoodIconList
   m_EditorClassIdentifier: 
   icons:
   - foodTag: 0

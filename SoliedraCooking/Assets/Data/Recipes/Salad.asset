@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16389994840af2540bbc80b6fb644c13, type: 2}
   - {fileID: 11400000, guid: 4c1c1e638d92f3446a2344b97b90ce50, type: 2}
   recipeImage: {fileID: 21300000, guid: 82013ea77894182458a9f456a7a8b02e, type: 3}
-  timeToPrepare: 60
+  timeToPrepare: 20
   description: '- Chop the salad.
 
     - Chop the tomatoe.
