@@ -66,6 +66,7 @@ public class MenuManager : MonoBehaviour
         InputManager.Instance.SetMenuNavigable(value);
         _currentMenu = startMenu.GetComponent<MenuNavigation>();
         startMenu.SetActive(value);
+        
     }
 
     public void ShowEndMenu(bool value)

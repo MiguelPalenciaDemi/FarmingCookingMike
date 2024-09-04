@@ -29,7 +29,7 @@ public class ArcadeModeManager : MonoBehaviour
 
     public void Start()
     {
-        StartMode();
+        //StartMode();
     }
 
     public void StartMode()

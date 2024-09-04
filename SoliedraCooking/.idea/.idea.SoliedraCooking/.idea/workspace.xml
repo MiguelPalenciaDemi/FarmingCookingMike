@@ -6,38 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ListOfFoodIcons.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ListOfFoodIcons.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ListOfModels.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ListOfModels.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/StartRecipeBook 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/StartRecipeBook 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/StartRecipeBook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/StartRecipeBook.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewInputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewInputSystem/PlayerController.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PLAYER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PLAYER.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PLAYER.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PLAYER.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TutorialBox-1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TutorialBox-1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/OrderUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kitchen.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FadeOutIn/UI/InitialTransitionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FadeOutIn/UI/InitialTransitionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Oven.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Oven.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Stove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Stove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactuables/Workstation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/FoodManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Orders/OrderUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodIcons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodIcons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodModels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArcadeModeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArcadeModeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Demo/ArcadeModeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Demo/ArcadeModeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -235,7 +206,8 @@
       <workItem from="1724790051466" duration="1036000" />
       <workItem from="1724836195622" duration="6435000" />
       <workItem from="1724923871553" duration="3035000" />
-      <workItem from="1724945239854" duration="5169000" />
+      <workItem from="1724945239854" duration="5569000" />
+      <workItem from="1724967768232" duration="308000" />
     </task>
     <servers />
   </component>
