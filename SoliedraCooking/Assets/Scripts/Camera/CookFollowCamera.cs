@@ -32,6 +32,8 @@ public class CookFollowCamera : MonoBehaviour
         
         //transform.position = Vector3.MoveTowards(transform.position, _targetCameraPosition, speed * Time.deltaTime);
         transform.position = Vector3.SmoothDamp(transform.position, _targetCameraPosition, ref _velocity, speed );
+        //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), 10*speed*Time.deltaTime);
         
+        //transform.LookAt(target);  
     }
 }

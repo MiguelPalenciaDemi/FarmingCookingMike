@@ -18,6 +18,10 @@ public struct TutorialCondition
     [SerializeField] private string conditionMessage;
     public string ConditionMessage => conditionMessage;
 
+    public ConditionType GetConditionType => conditionType;
+
+    public PointCondition GetPointCondition => pointCondition;
+
     [SerializeField] private ConditionType conditionType;
     [SerializeField] private string prefabCompare;
     [SerializeField] private Recipe recipeCompare;
@@ -30,6 +34,8 @@ public struct TutorialCondition
         {
             _orderCondition = OrderManager.Instance.GenerateTutorialOrder(recipeCompare);
         }
+        else if(conditionType == ConditionType.Destination && pointCondition)
+            pointCondition.gameObject.SetActive(false);
     }
 
     public bool IsComplete()
@@ -148,6 +154,8 @@ public class TutorialBox : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             popUp.Show(true);
+            if(condition.GetConditionType == ConditionType.Destination) //Activamos el pointcondition para que no completemos sin querer el objetivo
+                condition.GetPointCondition.gameObject.SetActive(true);
         }
     }
     

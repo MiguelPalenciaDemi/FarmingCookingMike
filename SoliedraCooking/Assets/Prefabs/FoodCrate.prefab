@@ -269,10 +269,10 @@ RectTransform:
   - {fileID: 3921012884982542143}
   m_Father: {fileID: 610524433926897962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0727, y: 0}
-  m_SizeDelta: {x: 1.819, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6174965666736768389
 CanvasRenderer:
@@ -322,15 +322,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -968.90643
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -539.5043
+      value: 0.545757
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.899999
+      value: 5.1948256
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -338,15 +338,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -363,7 +363,7 @@ PrefabInstance:
     - target: {fileID: -5754084199372789682, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1860052375797646561, guid: e5545a48d8135f5499f8f487358089c3, type: 3}
+      objectReference: {fileID: 365882689729293930, guid: e793974e71c18674fb28278d4ab10198, type: 3}
     - target: {fileID: 919132149155446097, guid: 3e9ac7fd914e1a544a39d9cb0f18f8c9, type: 3}
       propertyPath: m_Name
       value: FoodCrate
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 3914540481097683585, guid: 31657abcb9a250b4aba21f2ea8c1133c, type: 3}
-  ingredientInfo: {fileID: 11400000, guid: ae6058e984c55954aaa2b6dda6b16f91, type: 2}
+  ingredientInfo: {fileID: 11400000, guid: b29b6bee7c2f6ce4d9f588196a638906, type: 2}
   amount: 5
   counterUI: {fileID: 2625833491768828608}
   crateEmpty: {fileID: 1490014688594724021, guid: 3a7e7e9b9f729334092c64c534d4e236, type: 3}

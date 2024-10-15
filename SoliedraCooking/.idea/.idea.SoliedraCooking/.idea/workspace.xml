@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups/SceneKitchen.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups/SceneKitchen.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/floor_kitchen.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/floor_kitchen.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_innercorner_backsplash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_innercorner_backsplash.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_outercorner.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_outercorner.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_sink_backsplash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_sink_backsplash.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_straight_A_backsplash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_straight_A_backsplash.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/oven.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/oven.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/stove_single_countertop.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/stove_single_countertop.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_doorway.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_doorway.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_orderwindow.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_orderwindow.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FoodCrate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FoodCrate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WorkTop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WorkTop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArcadeModeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArcadeModeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Demo/ArcadeModeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Demo/ArcadeModeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CookFollowCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CookFollowCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -208,6 +225,10 @@
       <workItem from="1724923871553" duration="3035000" />
       <workItem from="1724945239854" duration="5569000" />
       <workItem from="1724967768232" duration="308000" />
+      <workItem from="1727364388355" duration="971000" />
+      <workItem from="1728934523174" duration="1721000" />
+      <workItem from="1728987463133" duration="2358000" />
+      <workItem from="1729002688515" duration="964000" />
     </task>
     <servers />
   </component>
