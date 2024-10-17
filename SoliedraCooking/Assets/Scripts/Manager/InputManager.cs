@@ -15,7 +15,10 @@ public class InputManager : MonoBehaviour
     private PlayerInteract _playerInteract;
     private PlayerInput _playerInput;
     private string _currentScheme;
-    private bool _onMenu;
+    private bool _onRecipeBook;
+    private bool _onPause;
+    private string _lastActionMap;
+    private string _currentActionMap;
     
     private void Awake()
     {
@@ -60,20 +63,18 @@ public class InputManager : MonoBehaviour
     }
     public void OnMove(InputValue value)
     {
-        if(!_onMenu)
+        if(!_onRecipeBook)
             _playerMovement.MoveInput(value.Get<Vector2>());
     }
 
     public void OnInteract(InputValue value)
     {
-        if(!_onMenu)
-            _playerInteract.InteractInput();
+        _playerInteract.InteractInput();
     }
 
     public void OnTakeDrop()
-    {
-        if(!_onMenu)
-            _playerInteract.TakeDropInput();
+    { 
+        _playerInteract.TakeDropInput();
     }
 
     public void OnNavigate(InputValue value)
@@ -84,16 +85,32 @@ public class InputManager : MonoBehaviour
 
     public void OnShowRecipeBook()
     {
-        if(_playerInput.currentActionMap.name == "MenuNavigation") return;
+        if(_onPause) return;
         
-        _onMenu = !_onMenu;
-        _playerInput.SwitchCurrentActionMap(_onMenu ? "UI" : "Player");
+        _onRecipeBook = !_onRecipeBook; //Necesario para cambiar entre receta y juego, distinto a la pausa.
+        _playerInput.SwitchCurrentActionMap(_onRecipeBook ? "UI" : "Player");
 
         RecipebookUI.Instance.ShowRecipeBook();
     }
 
+    public void OnPauseGame()
+    {
+        if (!MenuManager.Instance.IsThereMenuOptions()) return; //En caso de que no haya menu de pausa/opciones, salimos.
+        
+        _onPause = !_onPause;
+        
+        if(_onPause)
+            _lastActionMap = _playerInput.currentActionMap.name; //Solamente se cambia si entramos en pausa, sino se guardaria el MenuNavigation que no es necesario
+        
+        _playerInput.SwitchCurrentActionMap(_onPause ? "MenuNavigation" : _lastActionMap); //Cambia el action map
+        
+        
+        MenuManager.Instance.ShowPauseMenu();
+    }
+
     #region MenuNavigation
 
+    
     public void OnNavigateMenu(InputValue value)
     {
         MenuManager.Instance.Navigate(value);
@@ -104,21 +121,22 @@ public class InputManager : MonoBehaviour
         MenuManager.Instance.Select();
     }
 
-    public void OnShowMenu()
-    {
-        if(_playerInput.currentActionMap.name == "UI" && MenuManager.Instance.IsThereMenuOptions()) return;
-        
-        _onMenu = !_onMenu;
-        _playerInput.SwitchCurrentActionMap(_onMenu ? "MenuNavigation" : "Player");
-        
-        MenuManager.Instance.ShowMenu();
-
-    }
+    
 
     public void SetMenuNavigable(bool value)
     {
         _playerInput.SwitchCurrentActionMap(value ? "MenuNavigation" : "Player");
 
+    }
+
+    public void OnPress()
+    {
+        MenuManager.Instance.Press();
+    }
+    
+    public void OnInteractUI(InputValue value)
+    {
+        MenuManager.Instance.Interact(value);
     }
 
     #endregion

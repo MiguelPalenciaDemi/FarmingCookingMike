@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MyButton : Button,INavigableUI
+public class MySlider : Slider, INavigableUI
 {
+
     public void Select(bool value)
     {
         var color = targetGraphic.color;
@@ -12,14 +13,13 @@ public class MyButton : Button,INavigableUI
         targetGraphic.color = color;
     }
 
-    public void Interact(int value = 0)
+    public void Interact(int inputValue = 0)
     {
-        //Por ahora solo lo usaremos en el slider
-        Debug.Log(value +" esto es lo que llegaria al slider");
+        value += inputValue;
     }
 
     public void Press()
     {
-        onClick?.Invoke();
+        
     }
 }

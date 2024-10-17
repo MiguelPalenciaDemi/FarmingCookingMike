@@ -5,27 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8eaf81c-523a-4d5f-bcec-34abb09030b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups/SceneKitchen.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups/SceneKitchen.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoliedraCooking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/floor_kitchen.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/floor_kitchen.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_innercorner_backsplash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_innercorner_backsplash.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_outercorner.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_outercorner.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_sink_backsplash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_sink_backsplash.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_straight_A_backsplash.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/kitchencounter_straight_A_backsplash.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/oven.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/oven.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/stove_single_countertop.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/stove_single_countertop.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_doorway.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_doorway.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_orderwindow.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall_orderwindow.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Recipes/Salad.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FoodCrate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FoodCrate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WorkTop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WorkTop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/New Lighting Settings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_buns.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_buns.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_carrots.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_carrots.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_cheese.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_cheese.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_dough.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_dough.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_ham.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_ham.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_lettuce.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_lettuce.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_lid.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_lid.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_mushrooms.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_mushrooms.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_onions.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_onions.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_pepperoni.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_pepperoni.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_potatoes.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_potatoes.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_steak.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_steak.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_tomatoes.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/crate_tomatoes.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/pillar_A.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/pillar_A.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ART/KayLousbergArt/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx (unity)/wall.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewInputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewInputSystem/PlayerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups/SceneKitchen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneSetups/SceneKitchen.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArcadeModeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArcadeModeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CookFollowCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CookFollowCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/Lightmap-0_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/ReflectionProbe-0.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialScene/ReflectionProbe-1.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/Interfaces.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/Interfaces.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuNavigation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MyButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MyButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -38,6 +51,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/b0/b91e5516/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Demo/ArcadeModeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactuables/HeatStation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactuables/Plate.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,10 +66,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Recipes/RecipeBook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/PointCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuNavigation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MyNavigableObjects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MySlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/RecipeInfoUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ListOfFoodModels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -228,7 +245,10 @@
       <workItem from="1727364388355" duration="971000" />
       <workItem from="1728934523174" duration="1721000" />
       <workItem from="1728987463133" duration="2358000" />
-      <workItem from="1729002688515" duration="964000" />
+      <workItem from="1729002688515" duration="1106000" />
+      <workItem from="1729074931086" duration="3918000" />
+      <workItem from="1729087717487" duration="6623000" />
+      <workItem from="1729156861687" duration="11019000" />
     </task>
     <servers />
   </component>

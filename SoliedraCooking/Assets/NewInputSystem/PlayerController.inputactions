@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PauseGame",
+                    "type": "Button",
+                    "id": "50350ca6-3837-45c1-842d-8a58a4fbb129",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -229,6 +238,28 @@
                     "action": "ShowRecipeBook",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "276f5a60-732c-4c34-abd3-b453856ed78d",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff258df8-d2a7-4d48-8f0c-0364340daaa4",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -249,6 +280,15 @@
                     "name": "ShowRecipeBook",
                     "type": "Button",
                     "id": "0836c18c-6e37-48de-a42e-36ac466201d0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PauseGame",
+                    "type": "Button",
+                    "id": "2f0ca3f9-9d53-4b65-8c6a-0c96add24d06",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -541,6 +581,28 @@
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "da9c6f72-6991-43f1-bf22-6b4f9e382dc7",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a2c0e72-0d45-4c28-ad10-c2780b38c90c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -558,6 +620,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "InteractUI",
+                    "type": "Button",
+                    "id": "94eddb9d-743a-44d7-9003-bc1110b3b079",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Select",
                     "type": "Button",
                     "id": "4fc28582-1617-4228-aea4-417fd8cc5ccc",
@@ -567,9 +638,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ShowMenu",
+                    "name": "PauseGame",
                     "type": "Button",
-                    "id": "764bf747-34fb-439a-bc77-1cfcd1b2019a",
+                    "id": "786cc2fe-fae7-4ff5-9cdb-f3323a9c1e73",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "2b48ffed-ea5e-4161-a09c-3e181743663d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -625,72 +705,6 @@
                     "name": "negative",
                     "id": "79808064-08e1-41e8-bc6e-9df2cb9af69a",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "NavigateMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "KeyBoardHorizontal",
-                    "id": "cba9c89a-32a4-4b5a-84d8-3b45ee1f5d17",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NavigateMenu",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "positive",
-                    "id": "625fbe79-adfe-499b-a8d5-5c79d0b95249",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "NavigateMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "negative",
-                    "id": "c3bf0be3-7d36-4206-b46c-ab9cb3916f93",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "NavigateMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "KeyBoardHorizontalArrows",
-                    "id": "16ab94f8-6f4d-4f7f-9c58-1ab2328ba3ba",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NavigateMenu",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "positive",
-                    "id": "095416e5-819d-441d-957e-9f338621b28f",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "NavigateMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "negative",
-                    "id": "6285a08e-ffa9-4ee7-a0aa-5c3c5d52f722",
-                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -798,92 +812,180 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "GamepadJoystickHorizontal",
-                    "id": "d9e6f2d8-3443-49cc-9737-0fd8a40e1cd2",
+                    "name": "",
+                    "id": "fc9ed099-f197-4789-9db2-5f3d7d393049",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "273e8572-b368-4f50-a911-e3f14bc7b04b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "66c18c26-0c59-4f9a-a809-4f921a03a6c1",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48e28689-3373-4042-ae77-a4fe7a331eba",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "KeyBoardHorizontal",
+                    "id": "d474a6e8-87a2-4a7c-8417-3ab8fd21735f",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "NavigateMenu",
+                    "action": "InteractUI",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
-                    "id": "e8858e1d-cf32-41b5-b525-aef2c9a2bc33",
-                    "path": "<Gamepad>/leftStick/left",
+                    "id": "f949fb7f-fd93-40b0-a6df-9a6baa20c000",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "NavigateMenu",
+                    "groups": "Keyboard",
+                    "action": "InteractUI",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "7e49dfc4-d616-4430-96fd-685c91eec6c2",
+                    "id": "0c2e5256-3d5f-490e-a3e5-7ebe5f87a353",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "InteractUI",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "KeyBoardHorizontalArrows",
+                    "id": "3903b09a-b6ab-4c62-b2f3-419c5cb505a1",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractUI",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "1705f6e9-1e23-4da3-a3af-0473c2560f93",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "InteractUI",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "2edd7ac6-c8c5-443b-9c00-332ecc535887",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "InteractUI",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "GamepadJoystickHorizontal",
+                    "id": "19951764-60e6-4b6d-bb92-0bb6cc14b554",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractUI",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f62fa2c6-66d0-4c4b-a1f8-2a66cea09171",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "InteractUI",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "59e9bb87-3da1-4956-93e8-a3ecb8f1b6a1",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "NavigateMenu",
+                    "action": "InteractUI",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "GamepadDPadHorizontal",
-                    "id": "6aeaf5ee-ab5e-439f-a419-7309781c143f",
+                    "id": "809159b0-7e28-4cda-97fd-0b806886c08d",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "NavigateMenu",
+                    "action": "InteractUI",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
-                    "id": "03070f2f-7804-4a74-877d-1dab91b86eaa",
+                    "id": "8caf6e9f-74c7-428c-8597-7e23caff5dc0",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "NavigateMenu",
+                    "action": "InteractUI",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "da34a467-6dd4-4a45-9981-e55bff023a5a",
+                    "id": "74f20f03-f33d-410d-8da8-45cc417b0fc8",
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "NavigateMenu",
+                    "action": "InteractUI",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "a916a3eb-89ef-46f9-be13-8b54797e8513",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "ShowMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9ba9353e-79d5-4bcb-b119-66b9e777f5bc",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "ShowMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
