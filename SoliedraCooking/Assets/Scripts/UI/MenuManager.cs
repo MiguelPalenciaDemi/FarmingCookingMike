@@ -112,4 +112,17 @@ public class MenuManager : MonoBehaviour
         direction = direction > 0 ? 1 : -1;
         _currentMenu.Interact((int) direction);
     }
+
+    public void CloseMenu()
+    {
+        if(_currentMenu.HasBackMenu())
+            _currentMenu.BackMenu();
+        else
+        {
+            _currentMenu.CloseMenu();//cerramos si es el ultimo menu
+            _currentMenu = null;
+        }
+    }
+
+    public bool IsThereCurrentMenu() => _currentMenu != null;
 }

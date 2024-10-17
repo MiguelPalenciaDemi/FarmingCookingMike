@@ -96,16 +96,29 @@ public class InputManager : MonoBehaviour
     public void OnPauseGame()
     {
         if (!MenuManager.Instance.IsThereMenuOptions()) return; //En caso de que no haya menu de pausa/opciones, salimos.
-        
-        _onPause = !_onPause;
-        
-        if(_onPause)
+
+        if (!_onPause)
+        {
             _lastActionMap = _playerInput.currentActionMap.name; //Solamente se cambia si entramos en pausa, sino se guardaria el MenuNavigation que no es necesario
+            _playerInput.SwitchCurrentActionMap("MenuNavigation"); //Cambia el action map
+            
+            _onPause = true;
+            MenuManager.Instance.ShowPauseMenu();
+        }
+        else if (_onPause)
+        {
+            MenuManager.Instance.CloseMenu();
+            
+            if (!MenuManager.Instance.IsThereCurrentMenu()) //Comprobamos 
+            {
+                _playerInput.SwitchCurrentActionMap(_lastActionMap); //Cambia el action map
+                _onPause = false;
+            }
+            
+        }
+       
         
-        _playerInput.SwitchCurrentActionMap(_onPause ? "MenuNavigation" : _lastActionMap); //Cambia el action map
         
-        
-        MenuManager.Instance.ShowPauseMenu();
     }
 
     #region MenuNavigation

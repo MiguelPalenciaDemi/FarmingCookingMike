@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class MenuNavigation : MonoBehaviour
 {
+    [SerializeField] private MenuNavigation backMenuNavigation;
     [SerializeField] private List<GameObject> navigableGameObjects;
     private List<INavigableUI> navigableUIList;
     private int _currentIndex;
@@ -80,5 +81,23 @@ public class MenuNavigation : MonoBehaviour
     public void Interact(int value)
     {
         navigableUIList[_currentIndex].Interact(value);
+    }
+
+    public void BackMenu()
+    {
+        gameObject.SetActive(false);
+        MenuManager.Instance.SetCurrentMenu(backMenuNavigation);
+    }
+
+    public bool HasBackMenu() => backMenuNavigation;
+
+    public void OpenMenu()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        gameObject.SetActive(false);
     }
 }
